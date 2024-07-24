@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+    <title>Mi Portafolio</title>
+</head>
+
+<body >
+   <!--Encabezado del portafolio-->
+    <header>
+        <h1>Sophia Smith</h1>
+        <p>Desarrollador Frontend</p>
+    </header>
+
+ 
+   <!--Sección sobre mi-->
+    <section id="about">
+        <h2>Sobre Mí</h2>
+        <p>¡Hola! Soy un apasionada desarrollador frontend con un amor por la creación visual y
+              la funcionalidad intuitiva. Mi fascinación por el diseño web
+               y la tecnología me lleva a explorar continuamente nuevas tendencias
+                y herramientas. Con habilidades sólidas en HTML, CSS, y JavaScript,
+                 transformo ideas en experiencias interactivas y atractivas. Mi enfoque
+                  meticuloso y creativo se combina con un deseo constante de aprendizaje.
+                   Cuando no estoy codificando, me encontrarás disfrutando de la
+                    combinación perfecta de café y código. ¡Estoy emocionada 
+                    por la oportunidad de compartir mi viaje de desarrollo frontend contigo!</p>
+  
+    </section>
+
+       <!--Sección donde se muestran los proyectos realizados. Estos son solo ejemplos ficticios. Como alumno es ideal tenerlos en GitHub y poder compartirlos con los reclutadores-->
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="assets/img/Proyecto1.png" class="card-img-top" alt="proyecto1">
+                <div class="card-body">
+                  <h5 class="card-title">RESTORANT RESTÓ</h5>
+                  <p class="card-text">freestar
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, 
+                    sem eget sollicitudin tempor, ante nibh finibus odio, eu dignissim sem.      
+                  </p>
+                  <div class="m-3 text-center">
+                    <button class="html">HTML5</button>
+                    <button class="css">CSS</button>
+                    <button class="js">JS</button>
+                    <button class="bootstrap">BOOTSTRAP</button>
+                  </div>
+                  <div class="text-center">
+                    <img style="width: 15%;" src="assets/img/logotipo-de-github.png" alt="GitHub">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="assets/img/proyecto2.avif" class="card-img-top" alt="Pokemón">
+                <div class="card-body">
+                  <h5 class="card-title">POKEMÓN</h5>
+                  <p class="card-text">freestar
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, 
+                    sem eget sollicitudin tempor, ante nibh finibus odio, eu dignissim sem.   </p>
+                    <div class="m-3 text-center">
+                        <button class="html">HTML5</button>
+                    <button class="css">CSS</button>
+                    <button class="bootstrap">BOOTSTRAP</button>
+                        <button class="vue">VUE JS</button>
+                      </div>
+                      <div class="text-center">
+                        <img style="width: 15%;" src="assets/img/logotipo-de-github.png" alt="GitHub">
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="assets/img/Proyecto3.jpg" class="card-img-top" alt="Blog">
+                <div class="card-body">
+                  <h5 class="card-title">BLOG PERSONAL</h5>
+                  <p class="card-text">freestar
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, 
+                    sem eget sollicitudin tempor, ante nibh finibus odio, eu dignissim sem. </p>
+                    <div class="m-3 text-center">
+                        <button class="html">HTML5</button>
+                    <button class="css">CSS</button>
+                    <button class="bootstrap">BOOTSTRAP</button>
+                      </div>
+                      <div class="text-center">
+                        <img style="width: 15%;" src="assets/img/logotipo-de-github.png" alt="GitHub">
+                      </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+    </section>
+
+       <!--Sección de contacto con un formulario-->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="correo">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Detalles</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+         
+          <button type="submit" onclick="validarCorreo()" class="btn btn-primary">Enviar</button>
+        </form>
+        </form>
+    </section>
+
+       <!--Pie de página del portafolio-->
+    <footer class="text-center">
+        <p>&copy; 2024 Mi Portafolio</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

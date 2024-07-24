@@ -1,0 +1,43 @@
+body {    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav, section, footer {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#about{
+    text-align: justify;
+}
+
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bootstrap{
+    background-color: #6f42c1;
+}
+.html{
+    background-color: #e34c26;
+}
+.css{
+    background-color: #264de4;
+}
+.js{
+    background-color: #F0DB4F;
+    color: black;
+}
+.vue{
+    background-color: #41B883;
+}
