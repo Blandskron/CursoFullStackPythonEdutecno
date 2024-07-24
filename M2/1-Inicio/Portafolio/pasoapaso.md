@@ -1,4 +1,4 @@
-### README - Portafolio Personal
+### Portafolio Personal
 
 #### Descripción del Proyecto
 Este proyecto consiste en el desarrollo de un portafolio personal responsivo, el cual muestra información sobre tus habilidades y proyectos, y proporciona un formulario de contacto. El portafolio está construido con HTML, CSS, Bootstrap y JavaScript, siguiendo una estructura lógica y semántica.
@@ -9,16 +9,6 @@ El proyecto está organizado en las siguientes secciones:
 - **Habilidades**
 - **Proyectos Realizados**
 - **Formulario de Contacto**
-
-#### Requerimientos del Proyecto
-El portafolio debe cumplir con los siguientes requerimientos:
-1. **Estructura HTML (15 puntos)**
-2. **Estilo CSS (15 puntos)**
-3. **Bootstrap (15 puntos)**
-4. **JavaScript básico (15 puntos)**
-5. **Proyectos y habilidades (10 puntos)**
-6. **Formulario de contacto (15 puntos)**
-7. **Creatividad y originalidad (15 puntos)**
 
 #### Desarrollo del Proyecto
 
@@ -128,20 +118,6 @@ El portafolio debe cumplir con los siguientes requerimientos:
        </form>
    </section>
    ```
-
-7. **Creatividad y originalidad**
-   - **Elementos creativos:** Se incluyeron elementos visuales únicos y se aplicaron tecnologías aprendidas de manera innovadora.
-   - **Uso innovador de tecnologías:** Se destacaron elementos visuales y funcionalidades únicas para hacer que el portafolio sea distintivo.
-
-#### Instalación y Uso
-
-1. **Clonar el repositorio:**
-   ```bash
-   git clone [URL del repositorio]
-   ```
-
-2. **Abrir el archivo HTML:**
-   - Abrir `index.html` en un navegador web para visualizar el portafolio.
 
 #### Dependencias
 
