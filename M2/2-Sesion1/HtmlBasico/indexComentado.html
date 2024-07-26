@@ -11,8 +11,12 @@
         <h1>Bienvenido a mi página HTML de ejemplo</h1> <!-- Encabezado principal de la página -->
         <nav> <!-- Sección de navegación -->
             <ul> <!-- Lista no ordenada para los enlaces de navegación -->
-                <li><a href="#texto">Texto</a></li> <!-- Elemento de lista con enlace ancla al texto -->
-                <li><a href="#imagenes">Imágenes</a></li> <!-- Elemento de lista con enlace ancla a imágenes -->
+                <li>
+                    <a href="#texto">Texto</a>
+                </li> <!-- Elemento de lista con enlace ancla al texto -->
+                <li>
+                    <a href="#imagenes">Imágenes</a>
+                </li> <!-- Elemento de lista con enlace ancla a imágenes -->
                 <li><a href="#listas">Listas</a></li> <!-- Elemento de lista con enlace ancla a listas -->
                 <li><a href="#tablas">Tablas</a></li> <!-- Elemento de lista con enlace ancla a tablas -->
                 <li><a href="#formularios">Formularios</a></li> <!-- Elemento de lista con enlace ancla a formularios -->
@@ -23,7 +27,11 @@
     <section id="texto"> <!-- Sección para contenido relacionado con texto, identificado con "texto" -->
         <h2>Texto</h2> <!-- Subtítulo de la sección -->
         <p>Este es un párrafo de ejemplo.</p> <!-- Párrafo de texto -->
-        <p><strong>Negrita</strong>, <em>Itálica</em>, <u>Subrayado</u></p> <!-- Párrafo con texto en negrita, itálica y subrayado -->
+        <p>
+            <strong>Negrita</strong>, 
+            <em>Itálica</em>, 
+            <u>Subrayado</u>
+        </p> <!-- Párrafo con texto en negrita, itálica y subrayado -->
         <blockquote>Cita de ejemplo en un bloque de cita.</blockquote> <!-- Bloque para citar texto -->
         <pre>Texto preformateado</pre> <!-- Texto preformateado, mantiene espacios y saltos de línea -->
         <code>Código de ejemplo</code> <!-- Utilizado para mostrar una muestra de código -->
@@ -57,10 +65,22 @@
             <tr> <!-- Inicio de la fila de la tabla -->
                 <th>Encabezado 1</th> <!-- Celda de encabezado de la tabla -->
                 <th>Encabezado 2</th> <!-- Otra celda de encabezado de la tabla -->
+                <th>Encabezado 3</th> 
             </tr> <!-- Fin de la fila de encabezado -->
             <tr> <!-- Inicio de otra fila de la tabla -->
                 <td>Dato 1</td> <!-- Celda de datos de la tabla -->
                 <td>Dato 2</td> <!-- Otra celda de datos de la tabla -->
+                <td>Dato 3</td>
+            </tr> <!-- Fin de la fila de datos -->
+            <tr> <!-- Inicio de otra fila de la tabla -->
+                <td>Dato 1</td> <!-- Celda de datos de la tabla -->
+                <td>Dato 2</td> <!-- Otra celda de datos de la tabla -->
+                <td>Dato 3</td>
+            </tr> <!-- Fin de la fila de datos -->
+            <tr> <!-- Inicio de otra fila de la tabla -->
+                <td>Dato 1</td> <!-- Celda de datos de la tabla -->
+                <td>Dato 2</td> <!-- Otra celda de datos de la tabla -->
+                <td>Dato 3</td>
             </tr> <!-- Fin de la fila de datos -->
         </table> <!-- Fin de la tabla -->
     </section> <!-- Fin de la sección de tablas -->
@@ -70,6 +90,10 @@
         <form action="#"> <!-- Inicio del formulario, "action" define a dónde se enviarán los datos del formulario -->
             <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
             <input type="text" id="nombre" name="nombre"><br> <!-- Campo de entrada de texto para el nombre -->
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="contrasena">contrasena:</label>
+            <input type="password" name="contrasena" id="contrasena"><br>
             <input type="submit" value="Enviar"> <!-- Botón para enviar el formulario -->
         </form> <!-- Fin del formulario -->
     </section> <!-- Fin de la sección de formularios -->
