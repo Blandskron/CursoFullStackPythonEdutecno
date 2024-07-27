@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formularios</title>
+</head>
+<body>
+  <h1>FORMULARIO</h1>
+  <form action="/submit" method="post">
+    <label for="nombre">NOMBRE</label>
+    <br>
+    <input type="text" id="nombre" name="nombre">
+    <br>
+    <br>
+    <label for="direccion">DIRECCION</label>
+    <br>
+    <input type="text" id="direccion" name="direccion">
+    <br>
+    <br>
+    <label for="especialidad">ESPECIALIDAD MEDICA</label>
+    <br>
+    <select id="especialidad" name="especialidad">
+      <option value="especialidad1">MEDICINA INTERNA</option>
+      <option value="especialidad2">MEDICINA GENERAL</option>
+      <option value="especialidad3">TRAUMATOLOGIA</option>
+      <option value="especialidad4">NUTRICIONISTA</option>
+    </select>
+    <br>
+    <br>
+    <label for="fecha">FECHA</label>
+    <br>
+    <input type="date" id="fecha" name="fecha">
+    <br>
+    <br>
+    <label for="hora">HORA</label>
+    <br>
+    <input type="time" id="hora" name="hora">
+    <br>
+    <br>
+    <label for="correo">CORREO</label>
+    <br>
+    <input type="email" id="correo" name="correo">
+    <br>
+    <br>
+    <input type="submit" value="Confirmar">
+  </form>
+</body>
+</html>
