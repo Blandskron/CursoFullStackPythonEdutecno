@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda del Tesoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .treasure {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d2691e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Búsqueda del Tesoro</h1>
+        <p>¡Completa el formulario para encontrar el tesoro escondido!</p>
+        
+        <form id="treasureForm">
+            <div id="step1">
+                <label for="name">¿Cuál es tu nombre?</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <button type="button" onclick="nextStep(2)">Siguiente</button>
+            </div>
+
+            <div id="step2" class="hidden">
+                <label for="color">¿Cuál es tu color favorito?</label><br>
+                <input type="text" id="color" name="color" required><br><br>
+                <button type="button" onclick="nextStep(3)">Siguiente</button>
+            </div>
+
+            <div id="step3" class="hidden">
+                <label for="animal">¿Cuál es tu animal favorito?</label><br>
+                <input type="text" id="animal" name="animal" required><br><br>
+                <button type="button" onclick="showTreasure()">Descubrir Tesoro</button>
+            </div>
+        </form>
+
+        <div id="treasureMessage" class="hidden treasure">
+            ¡Felicidades <span id="userName"></span>! Has encontrado el tesoro. Tu color favorito es <span id="userColor"></span> y tu animal favorito es <span id="userAnimal"></span>.
+        </div>
+    </div>
+
+    <script>
+        function nextStep(step) {
+            document.getElementById(`step${step-1}`).classList.add('hidden');
+            document.getElementById(`step${step}`).classList.remove('hidden');
+        }
+
+        function showTreasure() {
+            const name = document.getElementById('name').value;
+            const color = document.getElementById('color').value;
+            const animal = document.getElementById('animal').value;
+
+            document.getElementById('userName').textContent = name;
+            document.getElementById('userColor').textContent = color;
+            document.getElementById('userAnimal').textContent = animal;
+
+            document.getElementById('treasureForm').classList.add('hidden');
+            document.getElementById('treasureMessage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

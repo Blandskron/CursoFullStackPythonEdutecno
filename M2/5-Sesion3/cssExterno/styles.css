@@ -1,0 +1,118 @@
+/* 
+    Archivo CSS separado para el ejemplo completo de CSS.
+    Aquí se incluyen comentarios explicativos para cada propiedad CSS utilizada.
+*/
+
+/* Estilo para el cuerpo del documento */
+body {
+    /* 
+        background-color: Define el color de fondo de la página.
+        margin: Establece el margen alrededor del contenido del cuerpo.
+        font-family: Especifica la fuente a utilizar para el texto.
+    */
+    background-color: #f0f8ff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el encabezado h1 */
+h1 {
+    /* 
+        color: Establece el color del texto.
+        text-align: Alinea el texto al centro de la página.
+        font-size: Define el tamaño de la fuente.
+    */
+    color: blue;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Estilo para los párrafos */
+p {
+    /* 
+        color: Define el color del texto.
+        font-size: Establece el tamaño de la fuente.
+        margin: Añade un margen alrededor del párrafo.
+    */
+    color: #333;
+    font-size: 1em;
+    margin: 20px;
+}
+
+/* Estilo para un contenedor con clase .contenedor */
+.contenedor {
+    /* 
+        border: Añade un borde alrededor del contenedor.
+        padding: Añade un relleno interno dentro del borde.
+        background-color: Define el color de fondo del contenedor.
+        border-radius: Redondea las esquinas del borde.
+    */
+    border: 2px solid #000;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Estilo para una lista con clase .lista */
+.lista {
+    /* 
+        list-style-type: Define el estilo del marcador para los elementos de lista.
+        padding: Añade un relleno interno dentro de la lista.
+        margin: Añade un margen alrededor de la lista.
+    */
+    list-style-type: square;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Estilo para los elementos de la lista */
+.lista li {
+    /* 
+        margin: Añade un margen inferior a los elementos de la lista.
+    */
+    margin-bottom: 10px;
+}
+
+/* Estilo para un enlace */
+a {
+    /* 
+        color: Establece el color del enlace.
+        text-decoration: Define la decoración del texto, como subrayado.
+    */
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* Estilo para un enlace cuando se pasa el ratón sobre él */
+a:hover {
+    /* 
+        text-decoration: Añade una subrayado al texto cuando se pasa el ratón sobre el enlace.
+    */
+    text-decoration: underline;
+}
+
+/* Estilo para un botón */
+button {
+    /* 
+        background-color: Define el color de fondo del botón.
+        color: Establece el color del texto del botón.
+        padding: Añade un relleno interno dentro del botón.
+        border: Define el borde del botón.
+        border-radius: Redondea las esquinas del borde del botón.
+        cursor: Cambia el cursor a una mano cuando se pasa el ratón sobre el botón.
+    */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para un botón cuando se pasa el ratón sobre él */
+button:hover {
+    /* 
+        background-color: Cambia el color de fondo del botón cuando se pasa el ratón sobre él.
+    */
+    background-color: #45a049;
+}

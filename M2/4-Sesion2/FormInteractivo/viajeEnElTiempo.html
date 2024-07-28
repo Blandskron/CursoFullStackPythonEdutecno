@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje en el Tiempo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .time-travel {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Viaje en el Tiempo</h1>
+        <p>¡Completa el formulario para viajar a través del tiempo!</p>
+        
+        <form id="timeForm">
+            <div id="step1">
+                <label for="year">¿En qué año naciste?</label><br>
+                <input type="number" id="year" name="year" required><br><br>
+                <button type="button" onclick="nextStep(2)">Siguiente</button>
+            </div>
+
+            <div id="step2" class="hidden">
+                <label for="decade">¿Cuál fue tu década favorita?</label><br>
+                <input type="text" id="decade" name="decade" required><br><br>
+                <button type="button" onclick="nextStep(3)">Siguiente</button>
+            </div>
+
+            <div id="step3" class="hidden">
+                <label for="future">¿Cómo imaginas el futuro?</label><br>
+                <textarea id="future" name="future" required></textarea><br><br>
+                <button type="button" onclick="showResult()">Ver Resultado</button>
+            </div>
+        </form>
+
+        <div id="resultMessage" class="hidden time-travel">
+            ¡Has viajado en el tiempo! Naciste en el año <span id="userYear"></span>, tu década favorita es <span id="userDecade"></span> y en el futuro <span id="userFuture"></span>.
+        </div>
+    </div>
+
+    <script>
+        function nextStep(step) {
+            document.getElementById(`step${step-1}`).classList.add('hidden');
+            document.getElementById(`step${step}`).classList.remove('hidden');
+        }
+
+        function showResult() {
+            const year = document.getElementById('year').value;
+            const decade = document.getElementById('decade').value;
+            const future = document.getElementById('future').value;
+
+            document.getElementById('userYear').textContent = year;
+            document.getElementById('userDecade').textContent = decade;
+            document.getElementById('userFuture').textContent = future;
+
+            document.getElementById('timeForm').classList.add('hidden');
+            document.getElementById('resultMessage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

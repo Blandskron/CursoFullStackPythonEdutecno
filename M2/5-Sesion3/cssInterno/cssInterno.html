@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de CSS Interno</title>
+    <style>
+        /* 
+        CSS Interno para el documento:
+        - Este estilo se aplica directamente dentro del documento HTML, dentro de la etiqueta <style> en el <head>.
+        */
+        
+        h1 {
+            /* 
+            Estilo para el encabezado (h1):
+            - color: blue; -> Establece el color del texto del encabezado a azul.
+            - text-align: center; -> Alinea el texto del encabezado al centro de la página.
+            - font-family: Arial, sans-serif; -> Aplica la fuente Arial, o una fuente sans-serif si Arial no está disponible.
+            */
+            color: blue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            /* 
+            Estilo para los párrafos (p):
+            - font-size: 18px; -> Establece el tamaño de la fuente del párrafo a 18 píxeles.
+            - color: #333; -> Cambia el color del texto del párrafo a un tono gris (#333).
+            - margin: 20px; -> Añade un margen de 20 píxeles alrededor del párrafo.
+            */
+            font-size: 18px;
+            color: #333;
+            margin: 20px;
+        }
+
+        .contenedor {
+            /* 
+            Estilo para el contenedor (div) con clase "contenedor":
+            - border: 2px solid #000; -> Añade un borde de 2 píxeles de grosor y color negro al div.
+            - padding: 10px; -> Añade un relleno interno (padding) de 10 píxeles dentro del div.
+            - background-color: #f0f0f0; -> Establece el color de fondo del div a un tono gris claro (#f0f0f0).
+            */
+            border: 2px solid #000;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        .contenedor p {
+            /* 
+            Estilo para el párrafo (p) dentro del contenedor (div) con clase "contenedor":
+            - margin: 0; -> Elimina el margen del párrafo dentro del div para ajustarse al diseño del contenedor.
+            */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la Página de Ejemplo</h1>
+    <p>Este es un ejemplo de cómo utilizar CSS interno para estilizar elementos HTML directamente en el documento.</p>
+    <div class="contenedor">
+        <p>CSS interno se usa para aplicar estilos directamente dentro del documento HTML, en la sección style del head.</p>
+    </div>
+</body>
+</html>
