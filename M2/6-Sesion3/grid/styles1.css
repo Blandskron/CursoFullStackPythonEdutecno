@@ -1,0 +1,21 @@
+#exercise1 {
+    display: grid; /* Utiliza Grid Layout para la disposición de los elementos. Esto convierte al contenedor en un grid container. */
+    grid-template-columns: repeat(3, 1fr); /* Define tres columnas de igual ancho (1fr cada una). El valor "1fr" significa una fracción del espacio disponible, distribuyendo el espacio equitativamente entre las columnas. */
+    gap: 10px; /* Define un espacio de 10px entre las filas y columnas del grid. Este espacio se aplica tanto horizontal como verticalmente entre los elementos hijos. */
+    padding: 20px; /* Añade un espacio interno de 20px alrededor del contenido del contenedor. Esto crea un margen interno entre el borde del contenedor y sus elementos. */
+    background-color: #f0f0f0; /* Establece un color de fondo gris claro para el contenedor. */
+}
+
+.box {
+    display: flex; /* Utiliza Flexbox para la disposición interna del contenido de cada caja, permitiendo una alineación fácil y precisa. */
+    justify-content: center; /* Centra horizontalmente el contenido dentro de cada caja (típicamente texto). */
+    align-items: center; /* Centra verticalmente el contenido dentro de cada caja. */
+    height: 100px; /* Define una altura fija de 100px para cada caja, asegurando un tamaño uniforme. */
+    color: white; /* Establece el color del texto en blanco, lo que asegura un buen contraste con los colores de fondo de las cajas. */
+    font-weight: bold; /* Aplica un estilo de fuente en negrita al texto, haciéndolo más prominente y fácil de leer. */
+}
+
+.box1 { background-color: red; } /* Establece un fondo rojo para la caja 1, diferenciándola visualmente de las demás. */
+.box2 { background-color: green; } /* Establece un fondo verde para la caja 2. */
+.box3 { background-color: blue; } /* Establece un fondo azul para la caja 3. */
+

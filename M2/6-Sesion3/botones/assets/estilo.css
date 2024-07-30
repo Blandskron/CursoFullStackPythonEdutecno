@@ -1,0 +1,37 @@
+body {
+    margin: 20px;
+    text-align: center;
+}
+
+.button-container {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.primary-btn {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.secondary-btn {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.success-btn {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.danger-btn {
+    background-color: #e74c3c;
+    color: #fff;
+}

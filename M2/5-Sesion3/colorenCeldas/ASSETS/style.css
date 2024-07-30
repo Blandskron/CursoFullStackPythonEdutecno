@@ -1,0 +1,43 @@
+#tabla{
+    border-collapse: separate;
+}
+#rojo{
+    background-color: red;
+}
+#blanco{
+    background-color: white;
+}
+#verde{
+    background-color: green;
+}
+#gris{
+    background-color: gray;
+}
+#cafe{
+    background-color: brown;
+}
+#azul{
+    background-color: blue;
+}
+#violeta{
+    background-color: violet;
+}
+#rosado{
+    background-color: pink;
+}
+#naranjo{
+    background-color: orange;
+}
+#amarillo{
+    background-color: yellow;
+}
+#negro{
+    background-color: black;
+    color: white;
+}
+#purpura{
+    background-color: purple;
+}
+#turquesa{
+    background-color: turquoise;
+}

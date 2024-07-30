@@ -1,0 +1,22 @@
+#exercise5 {
+    display: flex; /* Utiliza Flexbox para la disposición de los elementos. */
+    flex-direction: column; /* Alinea los elementos en una columna vertical. */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten y se envuelvan dentro del contenedor. */
+    height: 400px; /* Establece una altura fija de 400px para el contenedor. */
+    background-color: #b0b0b0; /* Aplica un fondo gris claro al contenedor. */
+}
+
+.box {
+    width: 100px; /* Ancho de cada caja. */
+    height: 100px; /* Altura de cada caja. */
+    display: flex; /* Aplica Flexbox a cada caja para centrar su contenido. */
+    justify-content: center; /* Centra el contenido horizontalmente dentro de las cajas. */
+    align-items: center; /* Centra el contenido verticalmente dentro de las cajas. */
+    color: white; /* Establece el color del texto en blanco. */
+    font-weight: bold; /* Texto en negrita. */
+    margin: 10px 0; /* Espaciado vertical entre cajas. */
+}
+
+.box1 { background-color: brown; } /* Fondo marrón para la caja 1. */
+.box2 { background-color: gold; } /* Fondo dorado para la caja 2. */
+.box3 { background-color: darkgreen; } /* Fondo verde oscuro para la caja 3. */

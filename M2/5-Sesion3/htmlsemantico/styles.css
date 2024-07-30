@@ -1,0 +1,54 @@
+/* Reset margins and paddings for various elements */
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the header */
+header {
+    background-color: #FF5733; /* Header background color */
+    color: white; /* White text for contrast */
+    height: 50px; /* Header height */
+    display: flex; /* Display elements in a row */
+    align-items: center; /* Vertically center content */
+    position: fixed; /* Fix the header at the top */
+    width: 100%; /* Header width 100% */
+    top: 0; /* Place header at the top */
+}
+
+/* Styles for the navigation bar */
+nav {
+    background-color: #33FF57; /* Navigation bar background color */
+    color: white; /* White text for contrast */
+    float: left; /* Align to the left */
+    width: 200px; /* Navigation bar width */
+    height: 600px; /* Height equal to 100% of viewport */
+    margin-top: 0px; /* Position below the header */
+    overflow-y: auto; /* Add vertical scrolling if necessary */
+}
+
+/* Styles for the main content */
+main {
+    background-color: #5733FF; /* Main content background color */
+    color: white; /* White text for contrast */
+    display: flex; /* Display elements in a column */
+    flex-direction: column; /* Stack elements vertically */
+    margin-top: 50px; /* Position below the header */
+    height: 600px; /* Height equal to 100% of viewport */
+}
+
+/* Styles for containers in the main content */
+.container {
+    flex: 1; /* Distribute available space among containers */
+    padding: 20px; /* Internal padding for containers */
+}
+
+/* Styles for the footer */
+footer {
+    background-color: #FF3357; /* Footer background color */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Internal padding */
+    height: 300px; /* Footer height */
+    clear: both; /* Clear the flow of previous elements */
+}

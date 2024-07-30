@@ -1,0 +1,22 @@
+#exercise2 {
+    display: grid; /* Usa Grid Layout para organizar los elementos. */
+    grid-template-columns: 1fr; /* Define una columna que ocupa todo el ancho disponible. */
+    grid-template-rows: repeat(3, 100px); /* Crea tres filas con una altura fija de 100px cada una. */
+    align-items: center; /* Centra verticalmente el contenido dentro de cada celda del grid. */
+    justify-items: center; /* Centra horizontalmente el contenido dentro de cada celda del grid. */
+    background-color: #e0e0e0; /* Aplica un fondo gris claro al contenedor. */
+    height: 300px; /* Define una altura fija de 300px para el contenedor. */
+}
+
+.box {
+    display: flex; /* Utiliza Flexbox para la disposición interna del contenido. */
+    justify-content: center; /* Centra horizontalmente el contenido dentro de cada caja. */
+    align-items: center; /* Centra verticalmente el contenido dentro de cada caja. */
+    width: 100px; /* Define un ancho fijo de 100px para cada caja. */
+    color: white; /* Establece el color del texto en blanco. */
+    font-weight: bold; /* Aplica un estilo de fuente en negrita al texto. */
+}
+
+.box1 { background-color: purple; } /* Fondo púrpura para la caja 1. */
+.box2 { background-color: orange; } /* Fondo naranja para la caja 2. */
+.box3 { background-color: teal; } /* Fondo verde azulado para la caja 3. */

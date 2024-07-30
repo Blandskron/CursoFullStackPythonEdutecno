@@ -1,0 +1,22 @@
+#exercise3 {
+    display: grid; /* Usa Grid Layout para organizar los elementos. */
+    grid-template-areas: /* Define áreas del grid con nombres específicos. */
+        "header header"
+        "content sidebar"
+        "footer footer";
+    gap: 10px; /* Espacio entre las áreas del grid. */
+    padding: 20px; /* Espacio interno alrededor del contenedor. */
+    background-color: #d0d0d0; /* Fondo gris claro para el contenedor. */
+}
+
+.box {
+    display: flex; /* Usa Flexbox dentro de cada caja para centrar contenido. */
+    justify-content: center; /* Centra horizontalmente el contenido. */
+    align-items: center; /* Centra verticalmente el contenido. */
+    color: white; /* Texto en blanco. */
+    font-weight: bold; /* Texto en negrita. */
+}
+
+.box1 { background-color: navy; grid-area: header; height: 100px; } /* Estilo para header. */
+.box2 { background-color: maroon; grid-area: content; height: 150px; } /* Estilo para contenido. */
+.box3 { background-color: olive; grid-area: sidebar; height: 150px; } /* Estilo para barra lateral. */

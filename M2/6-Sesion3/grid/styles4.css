@@ -1,0 +1,23 @@
+#exercise4 {
+    display: grid; /* Usa Grid Layout para organizar los elementos. */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho. */
+    justify-items: center; /* Centra horizontalmente los elementos en sus celdas. */
+    align-items: center; /* Centra verticalmente los elementos en sus celdas. */
+    gap: 20px; /* Espacio de 20px entre celdas. */
+    padding: 20px; /* Espacio interno de 20px alrededor del contenedor. */
+    background-color: #c0c0c0; /* Fondo gris claro para el contenedor. */
+}
+
+.box {
+    width: 100px; /* Ancho fijo para cada caja. */
+    height: 100px; /* Altura fija para cada caja. */
+    display: flex; /* Usa Flexbox para centrar el contenido dentro de las cajas. */
+    justify-content: center; /* Centra el contenido horizontalmente. */
+    align-items: center; /* Centra el contenido verticalmente. */
+    color: white; /* Texto en blanco. */
+    font-weight: bold; /* Texto en negrita. */
+}
+
+.box1 { background-color: pink; } /* Fondo rosa para la caja 1. */
+.box2 { background-color: cyan; } /* Fondo cian para la caja 2. */
+.box3 { background-color: lime; } /* Fondo lima para la caja 3. */
