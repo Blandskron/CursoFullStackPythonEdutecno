@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explicación de Mobile First Design</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1 {
+      color: #28a745;
+    }
+    .example {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 4px solid #28a745;
+      margin-bottom: 20px;
+    }
+    .code {
+      background-color: #f4f4f4;
+      padding: 10px;
+      font-family: monospace;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mobile First Design</h1>
+  <p>El Mobile First Design es una filosofía de diseño web que prioriza la experiencia en dispositivos móviles. En lugar de adaptar un diseño de escritorio a pantallas más pequeñas, el diseño comienza con una versión móvil simplificada y luego se expande para pantallas más grandes. Esto asegura que la experiencia en dispositivos móviles sea óptima y se eviten problemas de rendimiento.</p>
+
+  <h2>¿Cómo implementar Mobile First?</h2>
+  <p>Para implementar Mobile First, se comienzan a escribir estilos para la versión móvil y se utilizan Media Queries para añadir más estilos a medida que el tamaño de la pantalla aumenta.</p>
+
+  <div class="example">
+    <p><strong>Ejemplo:</strong> Diseño básico para móvil y expansión a escritorio.</p>
+    <pre class="code">
+/* Estilos base para móvil */
+body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Expansión para pantallas de 768px o más */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+/* Expansión para pantallas de 1200px o más */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+  }
+}
+    </pre>
+  </div>
+
+  <h2>Ventajas del Mobile First Design</h2>
+  <ul>
+    <li><strong>Mejor rendimiento:</strong> Al centrarse en una experiencia móvil, se reduce la cantidad de recursos cargados inicialmente.</li>
+    <li><strong>Enfoque en contenido esencial:</strong> Ayuda a priorizar el contenido y las funcionalidades más importantes.</li>
+    <li><strong>Adaptabilidad:</strong> El diseño se adapta fácilmente a diferentes tamaños de pantalla y dispositivos.</li>
+  </ul>
+
+  <p>El Mobile First Design es esencial en un mundo donde la mayoría del tráfico web proviene de dispositivos móviles.</p>
+</body>
+</html>

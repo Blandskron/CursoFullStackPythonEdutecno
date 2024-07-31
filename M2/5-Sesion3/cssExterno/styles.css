@@ -39,6 +39,10 @@ p {
     margin: 20px;
 }
 
+#parrafo {
+    color: #0066cc;
+}
+
 /* Estilo para un contenedor con clase .contenedor */
 .contenedor {
     /* 
@@ -71,6 +75,14 @@ p {
         margin: Añade un margen inferior a los elementos de la lista.
     */
     margin-bottom: 10px;
+}
+
+.elemento {
+    color: #45a049;
+}
+
+#elemento3 {
+    color: royalblue;
 }
 
 /* Estilo para un enlace */

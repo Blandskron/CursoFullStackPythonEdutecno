@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explicación de Media Queries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1 {
+      color: #007bff;
+    }
+    .example {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 4px solid #007bff;
+      margin-bottom: 20px;
+    }
+    .code {
+      background-color: #f4f4f4;
+      padding: 10px;
+      font-family: monospace;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Media Queries</h1>
+  <p>Las Media Queries son una técnica en CSS que permiten aplicar estilos específicos a elementos de una página web dependiendo de ciertas características del dispositivo, como el ancho de la pantalla, la resolución, la orientación, y más. Esto permite que un diseño se adapte de manera óptima a diferentes dispositivos, mejorando la experiencia del usuario.</p>
+
+  <h2>¿Cómo funcionan?</h2>
+  <p>Las Media Queries funcionan evaluando condiciones específicas y aplicando estilos CSS si esas condiciones se cumplen. Por ejemplo, puedes cambiar el layout de una página dependiendo del ancho de la pantalla.</p>
+
+  <div class="example">
+    <p><strong>Ejemplo:</strong> Ajustar el fondo y el color del texto según el ancho de la pantalla.</p>
+    <pre class="code">
+        /* Estilos por defecto */
+        body {
+        background-color: white;
+        color: black;
+        }
+
+        /* Media Query para pantallas de 600px o más */
+        @media (min-width: 600px) {
+        body {
+            background-color: lightblue;
+            color: white;
+        }
+        }
+    </pre>
+  </div>
+
+  <h2>Tipos de Media Queries</h2>
+  <p>Algunas de las Media Queries más comunes incluyen:</p>
+  <ul>
+    <li><strong>min-width / max-width:</strong> Aplica estilos según el ancho mínimo o máximo del viewport.</li>
+    <li><strong>min-height / max-height:</strong> Aplica estilos según la altura mínima o máxima del viewport.</li>
+    <li><strong>orientation:</strong> Aplica estilos según la orientación del dispositivo (landscape o portrait).</li>
+    <li><strong>prefers-color-scheme:</strong> Aplica estilos según la preferencia de esquema de color del usuario (light o dark mode).</li>
+  </ul>
+
+  <p>Las Media Queries son fundamentales para crear diseños responsivos que se adapten a cualquier dispositivo y resolución.</p>
+</body>
+</html>

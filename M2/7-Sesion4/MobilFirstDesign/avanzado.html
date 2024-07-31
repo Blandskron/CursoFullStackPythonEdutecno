@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a1a1a">
+  <title>Ejemplo Avanzado de Mobile First Design</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Variables CSS */
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #ffc107;
+      --dark-bg: #121212;
+      --light-bg: #ffffff;
+      --font-size-small: 1rem;
+      --font-size-medium: 1.2rem;
+      --font-size-large: 1.5rem;
+    }
+
+    /* Configuración inicial del cuerpo */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--light-bg);
+      color: #333;
+      font-size: var(--font-size-small);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Tema oscuro */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--dark-bg);
+        color: #ddd;
+      }
+    }
+
+    /* Encabezado */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .menu-icon {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Mostrar menú en pantallas grandes */
+    @media (min-width: 768px) {
+      nav ul {
+        display: flex;
+      }
+      .menu-icon {
+        display: none;
+      }
+    }
+
+    /* Contenedor principal */
+    main {
+      padding: 20px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+      background-color: var(--secondary-color);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    /* Grid de artículos */
+    .articles {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .articles {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .articles {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .article {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+    }
+
+    .article img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .article h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .article p {
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Mi App</div>
+    <div class="menu-icon">&#9776;</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Bienvenido a nuestra aplicación</h1>
+      <p>Descubre el contenido más interesante y actualizado.</p>
+      <img src="hero-image.jpg" alt="Imagen hero" loading="lazy">
+    </section>
+
+    <section class="articles">
+      <article class="article">
+        <img src="article1.jpg" alt="Artículo 1" loading="lazy">
+        <h2>Título del Artículo 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+      </article>
+      <article class="article">
+        <img src="article2.jpg" alt="Artículo 2" loading="lazy">
+        <h2>Título del Artículo 2</h2>
+        <p>Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at.</p>
+      </article>
+      <article class="article">
+        <img src="article3.jpg" alt="Artículo 3" loading="lazy">
+        <h2>Título del Artículo 3</h2>
+        <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mi App. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Script para el menú hamburguesa
+    document.querySelector('.menu-icon').addEventListener('click', () => {
+      const nav = document.querySelector('nav ul');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>

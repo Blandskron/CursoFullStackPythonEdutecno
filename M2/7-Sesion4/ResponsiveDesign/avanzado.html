@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000">
+  <title>Ejemplo Avanzado de Responsive Design</title>
+  <style>
+    /* Variables CSS para temas y tamaños */
+    :root {
+      --primary-color: #1a73e8;
+      --secondary-color: #fbbc05;
+      --dark-bg: #121212;
+      --light-bg: #ffffff;
+      --font-size-small: 1rem;
+      --font-size-medium: 1.2rem;
+      --font-size-large: 1.5rem;
+    }
+
+    /* Configuración inicial de la página */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: var(--font-size-small);
+      background-color: var(--light-bg);
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Tema oscuro */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--dark-bg);
+        color: #ccc;
+      }
+    }
+
+    /* Diseño del header */
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: none;
+    }
+
+    /* Estilos para dispositivos grandes */
+    @media (min-width: 768px) {
+      nav {
+        display: block;
+      }
+
+      .menu {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    /* Diseño de la sección principal */
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: var(--secondary-color);
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Ajustes de tipografía */
+    h1 {
+      font-size: var(--font-size-large);
+    }
+
+    p {
+      font-size: var(--font-size-medium);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* Adaptación a pantallas de alta densidad */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .card img {
+        content: url('high-resolution-image.jpg');
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Mi Sitio Web</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#" style="color: white;">Inicio</a></li>
+        <li><a href="#" style="color: white;">Servicios</a></li>
+        <li><a href="#" style="color: white;">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <img src="image1.jpg" alt="Imagen de ejemplo">
+      <h1>Artículo 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+    </section>
+    <section class="card">
+      <img src="image2.jpg" alt="Imagen de ejemplo">
+      <h1>Artículo 2</h1>
+      <p>Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at.</p>
+    </section>
+    <section class="card">
+      <img src="image3.jpg" alt="Imagen de ejemplo">
+      <h1>Artículo 3</h1>
+      <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

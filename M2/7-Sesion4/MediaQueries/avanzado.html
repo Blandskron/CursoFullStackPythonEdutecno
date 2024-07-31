@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000">
+  <title>Ejemplo Avanzado de Media Queries</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    /* Variables CSS */
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --dark-bg: #1e1e1e;
+      --light-bg: #ffffff;
+      --text-color-dark: #f5f5f5;
+      --text-color-light: #333;
+    }
+
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color-light);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Tema oscuro */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--dark-bg);
+        color: var(--text-color-dark);
+      }
+    }
+
+    /* Encabezado */
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    /* Contenedor principal */
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    /* Artículos */
+    .article {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: var(--secondary-color);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .article img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .article h2 {
+      font-size: 1.8rem;
+      margin: 0 0 10px;
+    }
+
+    .article p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    /* Media Queries avanzadas */
+    /* Dispositivos con ancho mínimo de 768px */
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav ul li a {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Dispositivos con ancho mínimo de 1200px */
+    @media (min-width: 1200px) {
+      main {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .article h2 {
+        font-size: 2.2rem;
+      }
+
+      .article p {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Pantallas de alta resolución */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .article img {
+        content: url('high-resolution-image.jpg');
+      }
+    }
+
+    /* Adaptaciones para pantallas táctiles */
+    @media (hover: none) and (pointer: coarse) {
+      .article {
+        padding: 30px;
+      }
+    }
+
+    /* Ajustes para dispositivos en modo paisaje */
+    @media (orientation: landscape) {
+      header, nav, main {
+        padding: 10px 20px;
+      }
+
+      .article {
+        margin-bottom: 15px;
+      }
+    }
+
+    /* Soporte para pantallas con ancho reducido y alto reducido */
+    @media (max-width: 600px) and (max-height: 400px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      nav ul li {
+        margin: 0 5px;
+      }
+
+      .article h2 {
+        font-size: 1.5rem;
+      }
+
+      .article p {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Advanced UI</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="article">
+      <img src="article1.jpg" alt="Artículo 1">
+      <h2>Artículo 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </article>
+    <article class="article">
+      <img src="article2.jpg" alt="Artículo 2">
+      <h2>Artículo 2</h2>
+      <p>Praesent libero. Sed cursus ante dapibus diam.</p>
+    </article>
+    <article class="article">
+      <img src="article3.jpg" alt="Artículo 3">
+      <h2>Artículo 3</h2>
+      <p>Maecenas mattis. Sed convallis tristique sem.</p>
+    </article>
+  </main>
+</body>
+</html>

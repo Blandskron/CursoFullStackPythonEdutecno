@@ -1,0 +1,100 @@
+/* reset.css - Reset avanzado para estilos CSS */
+
+/* Elimina márgenes, paddings y bordes predeterminados */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Configuración general */
+html {
+    line-height: 1.15; /* Ajuste para una mejor legibilidad */
+    -webkit-text-size-adjust: 100%; /* Evita el ajuste de texto en dispositivos móviles */
+    -ms-overflow-style: scrollbar; /* Estilo de barra de desplazamiento en IE */
+    scrollbar-width: thin; /* Estilo de barra de desplazamiento en Firefox */
+}
+
+/* Elimina los estilos predeterminados de la lista */
+ol, ul {
+    list-style: none;
+}
+
+/* Elimina la decoración del enlace por defecto */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Elimina los estilos predeterminados de las imágenes */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+/* Establece una fuente base consistente */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-wrap: break-word;
+}
+
+/* Establece un tamaño de fuente base y un fondo de color */
+body, html {
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Normaliza la apariencia de los elementos de bloque */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+/* Normaliza la apariencia de los elementos de formulario */
+input, button, select, textarea {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none; /* Elimina estilos por defecto en WebKit */
+    -moz-appearance: none; /* Elimina estilos por defecto en Firefox */
+    appearance: none; /* Elimina estilos por defecto en todos los navegadores */
+}
+
+/* Asegura que los campos de formulario tengan un estilo consistente */
+textarea {
+    resize: none; /* Elimina el control de tamaño */
+    overflow: auto;
+}
+
+/* Normaliza la apariencia de los botones */
+button {
+    cursor: pointer;
+    background: none;
+}
+
+/* Elimina la decoración predeterminada en el detalle de resumen */
+summary {
+    display: list-item;
+}
+
+/* Establece estilos consistentes para tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Restablece las propiedades de los elementos de audio/video */
+audio, video {
+    display: inline-block;
+}
