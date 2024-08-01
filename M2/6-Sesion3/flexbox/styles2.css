@@ -4,7 +4,6 @@
     justify-content: center; /* Centra los elementos verticalmente dentro del contenedor. */
     align-items: center; /* Centra los elementos horizontalmente dentro del contenedor. */
     height: 300px; /* Establece una altura fija de 300px para el contenedor. */
-    background-color: #e0e0e0; /* Aplica un fondo gris claro al contenedor. */
 }
 
 .box {

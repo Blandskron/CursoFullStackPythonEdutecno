@@ -1,20 +1,33 @@
-#exercise1 {
-    display: flex; /* Aplica el modelo de caja flexible (Flexbox) al contenedor, permitiendo una alineación y distribución de elementos hijos más dinámica. */
-    justify-content: space-between; /* Distribuye los elementos hijos dentro del contenedor flex de manera que haya espacio igual entre ellos. El primer elemento está alineado al inicio y el último al final del contenedor. */
-    padding: 20px; /* Añade un espacio de 20 píxeles alrededor del contenido del contenedor, creando un margen interno. */
-    background-color: #f0f0f0; /* Establece un color de fondo gris claro para el contenedor. */
+.fuego {
+    background-color: blueviolet;
 }
 
-.box {
-    width: 100px; /* Define un ancho fijo de 100 píxeles para cada caja dentro del contenedor flex. */
-    height: 100px; /* Define una altura fija de 100 píxeles para cada caja. */
-    display: flex; /* Aplica Flexbox a cada caja, lo que permite un control más preciso sobre el alineamiento del contenido interno. */
-    justify-content: center; /* Centra horizontalmente el contenido (texto) dentro de cada caja. */
-    align-items: center; /* Centra verticalmente el contenido (texto) dentro de cada caja. */
-    color: white; /* Establece el color del texto dentro de las cajas a blanco, para asegurar una buena legibilidad contra los colores de fondo. */
-    font-weight: bold; /* Aplica un estilo de fuente en negrita al texto dentro de las cajas, haciéndolo más visible y prominente. */
+#ejemplo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
 }
 
-.box1 { background-color: red; } /* Aplica un fondo rojo a la caja con la clase `box1`. */
-.box2 { background-color: green; } /* Aplica un fondo verde a la caja con la clase `box2`. */
-.box3 { background-color: blue; } /* Aplica un fondo azul a la caja con la clase `box3`. */
+.caja {
+    width: 100px;
+    height: 100px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.color1 {
+    background-color: brown;
+}
+
+.color2 {
+    background-color: rgb(42, 165, 69);
+}
+
+.color3 {
+    background-color: rgb(75, 42, 165);
+}

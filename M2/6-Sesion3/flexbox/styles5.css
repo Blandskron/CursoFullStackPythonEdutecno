@@ -3,7 +3,7 @@
     flex-direction: column; /* Alinea los elementos en una columna vertical. */
     flex-wrap: wrap; /* Permite que los elementos se ajusten y se envuelvan dentro del contenedor. */
     height: 400px; /* Establece una altura fija de 400px para el contenedor. */
-    background-color: #b0b0b0; /* Aplica un fondo gris claro al contenedor. */
+
 }
 
 .box {

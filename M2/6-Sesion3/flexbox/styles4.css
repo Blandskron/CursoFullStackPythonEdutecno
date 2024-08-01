@@ -2,7 +2,7 @@
     display: flex; /* Utiliza Flexbox para la disposición de los elementos. */
     justify-content: space-around; /* Distribuye los elementos con espacio alrededor de cada uno, dejando espacio igual entre ellos y los bordes del contenedor. */
     padding: 20px; /* Añade un espacio interno de 20px alrededor del contenido del contenedor. */
-    background-color: #c0c0c0; /* Aplica un fondo gris claro al contenedor. */
+
 }
 
 .box {

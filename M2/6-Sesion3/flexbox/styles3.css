@@ -2,7 +2,7 @@
     display: flex; /* Utiliza Flexbox para la disposición de los elementos. */
     justify-content: flex-end; /* Alinea los elementos al final del contenedor, hacia la derecha. */
     padding: 20px; /* Añade un espacio interno de 20px alrededor del contenido del contenedor. */
-    background-color: #d0d0d0; /* Aplica un fondo gris claro al contenedor. */
+
 }
 
 .box {
