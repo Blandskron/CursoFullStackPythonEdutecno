@@ -1,0 +1,36 @@
+body{
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: #051B54;
+}
+.nav-link, .btn{
+    color: #FFFFFF;
+}
+#IniciarSesion{
+    background-color: #FFFFFF33;
+    border-radius: 20px;
+}
+.card{
+    background-color: #62DAD3;
+    }
+.page-item a{
+    color: #051B54;
+}
+#list a{
+    color: #051B54;
+}
+#image a{
+    text-decoration: none;
+}
+#form{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 10px;
+}
+.navbar-brand{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

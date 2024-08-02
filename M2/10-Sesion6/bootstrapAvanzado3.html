@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de E-commerce</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cartModal"><i class="fas fa-shopping-cart"></i> Carrito</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Página de Productos -->
+    <div class="container mt-5">
+        <h2 class="text-center">Nuestros Productos</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto 1.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#productModal" data-product="Producto 1">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">Descripción breve del producto 2.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#productModal" data-product="Producto 2">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">Descripción breve del producto 3.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#productModal" data-product="Producto 3">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Más productos aquí -->
+        </div>
+    </div>
+
+    <!-- Modal de Detalles del Producto -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 id="productName">Nombre del Producto</h5>
+                    <p id="productDescription">Descripción detallada del producto seleccionado.</p>
+                    <h6 id="productPrice">Precio: $XX.XX</h6>
+                    <button class="btn btn-success" id="addToCart">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito de Compras -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems">
+                            <!-- Items del carrito aquí -->
+                        </tbody>
+                    </table>
+                    <h5 class="text-right">Total: $<span id="cartTotal">0.00</span></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar Comprando</button>
+                    <button type="button" class="btn btn-primary" id="checkoutButton">Proceder al Pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de Notificación -->
+    <div aria-live="polite" aria-atomic="true" style="position: relative;">
+        <div class="toast" id="cartToast" style="position: absolute; top: 20px; right: 20px;">
+            <div class="toast-header">
+                <strong class="mr-auto">Notificación</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Producto añadido al carrito.
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Ejemplo de datos de productos
+        var products = {
+            "Producto 1": {description: "Descripción detallada del Producto 1", price: "20.00"},
+            "Producto 2": {description: "Descripción detallada del Producto 2", price: "30.00"},
+            "Producto 3": {description: "Descripción detallada del Producto 3", price: "40.00"}
+        };
+
+        // Manejar apertura de modal de detalles del producto
+        $('#productModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var product = button.data('product');
+            var modal = $(this);
+            modal.find('.modal-title').text('Detalles de ' + product);
+            modal.find('#productName').text(product);
+            modal.find('#productDescription').text(products[product].description);
+            modal.find('#productPrice').text('Precio: $' + products[product].price);
+            modal.find('#addToCart').data('product', product);
+        });
+
+        // Añadir producto al carrito
+        $('#addToCart').click(function () {
+            var product = $(this).data('product');
+            var productData = products[product];
+            var cartItem = '<tr>' +
+                '<td>' + product + '</td>' +
+                '<td>1</td>' +
+                '<td>$' + productData.price + '</td>' +
+                '<td>$' + productData.price + '</td>' +
+                '<td><button class="btn btn-sm btn-danger remove-item">Eliminar</button></td>' +
+                '</tr>';
+            $('#cartItems').append(cartItem);
+            updateCartTotal();
+            $('#productModal').modal('hide');
+            $('#cartToast').toast('show');
+        });
+
+        // Eliminar producto del carrito
+        $(document).on('click', '.remove-item', function () {
+            $(this).closest('tr').remove();
+            updateCartTotal();
+        });
+
+        // Actualizar total del carrito
+        function updateCartTotal() {
+            var total = 0;
+            $('#cartItems tr').each(function () {
+                var price = parseFloat($(this).find('td:eq(2)').text().replace('$', ''));
+                total += price;
+            });
+            $('#cartTotal').text(total.toFixed(2));
+        }
+
+        // Manejar proceso de pago
+        $('#checkoutButton').click(function () {
+            alert('Procesando pago...');
+        });
+    </script>
+</body>
+</html>
