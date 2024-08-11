@@ -3,3 +3,4 @@
 
 var nombre = prompt("¿Cuál es tu nombre?"); // Solicita al usuario que ingrese su nombre.
 console.log("Hola, " + nombre + "!"); // Muestra un saludo personalizado usando el nombre ingresado.
+alert("Hola, " + nombre + "!"); // Muestra un saludo personalizado
