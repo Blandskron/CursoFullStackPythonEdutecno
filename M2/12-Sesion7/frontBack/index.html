@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar contenido con JSON</title>
+</head>
+<body>
+    <h1>Artículos</h1>
+    <!-- Este contenedor se usará para mostrar los datos que lleguen del JSON -->
+    <div id="contenedor-articulos"></div>
+
+    <script>
+        // Paso 1: Crear una nueva solicitud HTTP
+        console.log("Creando solicitud HTTP...");
+        var xhr = new XMLHttpRequest();
+
+        // Paso 2: Configurar la solicitud para obtener el archivo JSON
+        console.log("Configurando la solicitud para obtener datos del archivo JSON...");
+        xhr.open("GET", "datos.json", true);
+
+        // Paso 3: Definir qué hacer cuando la solicitud es exitosa
+        xhr.onreadystatechange = function() {
+            console.log("Cambiando estado de readyState: ", xhr.readyState);
+            console.log("Estado de la solicitud (status): ", xhr.status);
+
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log("Solicitud exitosa, procesando datos...");
+
+                // Paso 4: Convertir el texto JSON a un objeto de JavaScript
+                var articulos = JSON.parse(xhr.responseText);
+                console.log("Datos recibidos del JSON:", articulos);
+
+                // Paso 5: Seleccionar el contenedor en el HTML donde se mostrarán los artículos
+                var contenedor = document.getElementById('contenedor-articulos');
+                console.log("Contenedor seleccionado:", contenedor);
+
+                // Paso 6: Recorrer cada artículo en el array y crear elementos HTML para mostrarlo
+                articulos.forEach(function(articulo, index) {
+                    console.log("Procesando artículo ", index + 1, ":", articulo);
+
+                    // Crear un elemento <h2> para el título del artículo
+                    var tituloElemento = document.createElement('h2');
+                    tituloElemento.textContent = articulo.titulo; // Asignar el título del artículo
+
+                    // Crear un elemento <p> para la descripción del artículo
+                    var descripcionElemento = document.createElement('p');
+                    descripcionElemento.textContent = articulo.descripcion; // Asignar la descripción del artículo
+
+                    // Agregar los elementos al contenedor
+                    contenedor.appendChild(tituloElemento);
+                    contenedor.appendChild(descripcionElemento);
+
+                    console.log("Artículo agregado al DOM: ", articulo.titulo);
+                });
+            }
+        };
+
+        // Paso 7: Enviar la solicitud al servidor para obtener los datos
+        console.log("Enviando solicitud al servidor...");
+        xhr.send();
+    </script>
+</body>
+</html>

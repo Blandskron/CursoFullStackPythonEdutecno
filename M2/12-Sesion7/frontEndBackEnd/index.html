@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Backend y Frontend</title>
+    <style>
+        /* Estilos básicos para la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .producto {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .producto h2 {
+            margin-top: 0;
+        }
+        .producto p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <!-- Este contenedor se usará para mostrar los productos cargados desde el JSON -->
+    <div id="contenedor-productos"></div>
+
+    <script>
+        // Paso 1: Crear una nueva solicitud HTTP para obtener los datos
+        var xhr = new XMLHttpRequest();
+        console.log("Solicitud HTTP creada...");
+
+        // Paso 2: Configurar la solicitud para obtener el archivo JSON
+        xhr.open("GET", "datos.json", true);
+        console.log("Solicitud configurada para obtener 'datos.json'...");
+
+        // Paso 3: Definir qué hacer cuando la solicitud es exitosa
+        xhr.onreadystatechange = function() {
+            console.log("Cambiando estado de readyState: ", xhr.readyState);
+            console.log("Estado de la solicitud (status): ", xhr.status);
+
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log("Solicitud exitosa, procesando datos...");
+
+                // Paso 4: Convertir el texto JSON a un objeto de JavaScript
+                var productos = JSON.parse(xhr.responseText);
+                console.log("Datos recibidos del JSON:", productos);
+
+                // Paso 5: Seleccionar el contenedor en el HTML donde se mostrarán los productos
+                var contenedor = document.getElementById('contenedor-productos');
+                console.log("Contenedor seleccionado:", contenedor);
+
+                // Paso 6: Recorrer cada producto en el array y crear elementos HTML para mostrarlo
+                productos.forEach(function(producto, index) {
+                    console.log("Procesando producto ", index + 1, ":", producto);
+
+                    // Crear un div para cada producto
+                    var productoElemento = document.createElement('div');
+                    productoElemento.className = 'producto'; // Agregar clase para estilos
+
+                    // Crear un elemento <h2> para el nombre del producto
+                    var nombreElemento = document.createElement('h2');
+                    nombreElemento.textContent = producto.nombre;
+
+                    // Crear un elemento <p> para la descripción del producto
+                    var descripcionElemento = document.createElement('p');
+                    descripcionElemento.textContent = producto.descripcion;
+
+                    // Crear un elemento <p> para el precio del producto
+                    var precioElemento = document.createElement('p');
+                    precioElemento.textContent = "Precio: $" + producto.precio;
+
+                    // Agregar los elementos al div del producto
+                    productoElemento.appendChild(nombreElemento);
+                    productoElemento.appendChild(descripcionElemento);
+                    productoElemento.appendChild(precioElemento);
+
+                    // Agregar el div del producto al contenedor
+                    contenedor.appendChild(productoElemento);
+
+                    console.log("Producto agregado al DOM: ", producto.nombre);
+                });
+            }
+        };
+
+        // Paso 7: Enviar la solicitud al servidor para obtener los datos
+        console.log("Enviando solicitud al servidor...");
+        xhr.send();
+    </script>
+</body>
+</html>
