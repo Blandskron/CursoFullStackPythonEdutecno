@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Métodos HTTP con Entrada de Datos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        button {
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input {
+            padding: 5px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulación de Métodos HTTP con Entrada de Datos</h1>
+
+    <h2>Datos para el Producto</h2>
+    <label for="productId">ID del Producto:</label><br>
+    <input type="number" id="productId"><br>
+
+    <label for="productName">Nombre del Producto:</label><br>
+    <input type="text" id="productName"><br>
+
+    <h2>Métodos HTTP</h2>
+    <button onclick="getData()">GET</button>
+    <button onclick="postData()">POST</button>
+    <button onclick="putData()">PUT</button>
+    <button onclick="deleteData()">DELETE</button>
+
+    <h2>Resultado</h2>
+    <pre id="resultado"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
