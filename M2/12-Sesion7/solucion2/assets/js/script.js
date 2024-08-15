@@ -2,7 +2,7 @@ var opcion = prompt("¡Hola! Soy Eva, tu asistente virtual del Servicio al Clien
 
 switch (opcion) {
     case "1":
-            boletasPagos();
+        boletasPagos();
         break;
     case "2":
         senalLlamadas();

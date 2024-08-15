@@ -15,43 +15,32 @@
 
     <script>
         function checkLogin() {
-            console.log('Iniciando proceso de login...');
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            console.log('Username:', username);
-            console.log('Password:', password);
 
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
-                console.log('XHR readyState:', xhr.readyState);
-                console.log('XHR status:', xhr.status);
 
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    console.log('Respuesta recibida:', xhr.responseText);
                     var users = JSON.parse(xhr.responseText);
 
-                    console.log('Usuarios obtenidos:', users);
 
                     var userExists = users.some(function (user) {
                         return user.username === username && user.password === password;
                     });
 
-                    console.log('Usuario existe:', userExists);
 
                     if (userExists) {
-                        console.log('Login exitoso');
                         localStorage.setItem("isLoggedIn", "true");
                         window.location.href = 'welcome.html';
                     } else {
-                        console.log('Login fallido');
                         alert('Nombre de usuario o contraseña incorrecta');
                         localStorage.setItem("isLoggedIn", "false");
                     }
                 }
             };
             xhr.open("GET", "users.json", true);
-            console.log('Enviando solicitud GET a users.json');
             xhr.send();
         }
     </script>
