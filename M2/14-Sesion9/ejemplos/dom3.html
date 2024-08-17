@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir y Eliminar Elementos</title>
+</head>
+<body>
+
+<h2>Ejemplo 3: Añadir y Eliminar Elementos</h2>
+<div id="contenedor">
+    <p>Elemento existente.</p>
+</div>
+<button onclick="añadirElemento()">Añadir Elemento</button>
+<button onclick="eliminarElemento()">Eliminar Elemento</button>
+
+<script>
+    function añadirElemento() {
+        let nuevoElemento = document.createElement("p");
+        nuevoElemento.innerText = "Este es un nuevo párrafo añadido.";
+        document.getElementById("contenedor").appendChild(nuevoElemento);
+    }
+
+    function eliminarElemento() {
+        let contenedor = document.getElementById("contenedor");
+        if (contenedor.lastChild) {
+            contenedor.removeChild(contenedor.lastChild);
+        }
+    }
+</script>
+
+</body>
+</html>

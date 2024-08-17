@@ -1,4 +1,5 @@
 // Creación de un array con diferentes elementos
+// Indice      0  1  2  3  4
 let numeros = [1, 2, 3, 4, 5];
 
 // Acceso a un elemento del array por su índice

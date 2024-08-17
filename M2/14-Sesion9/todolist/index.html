@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .todo-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+        .remove-btn {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="todo-container">
+        <h3 class="text-center">To-Do List</h3>
+        <div class="input-group mb-3">
+            <input type="text" id="todoInput" class="form-control" placeholder="Añadir nueva tarea">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="agregarTarea()">Añadir</button>
+            </div>
+        </div>
+        <ul id="todoList" class="list-group">
+            <!-- Las tareas se agregarán aquí -->
+        </ul>
+    </div>
+</div>
+
+<script>
+    function agregarTarea() {
+        let tarea = document.getElementById("todoInput").value;
+        if (tarea.trim() !== "") {
+            let li = document.createElement("li");
+            li.className = "list-group-item todo-item";
+            li.innerHTML = `
+                <span>${tarea}</span>
+                <span class="remove-btn" onclick="eliminarTarea(this)">x</span>
+            `;
+            document.getElementById("todoList").appendChild(li);
+            document.getElementById("todoInput").value = "";
+        }
+    }
+
+    function eliminarTarea(elemento) {
+        let li = elemento.parentNode;
+        li.parentNode.removeChild(li);
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

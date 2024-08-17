@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contenido de un Elemento</title>
+</head>
+<body>
+
+<h2>Ejemplo 1: Cambiar Contenido</h2>
+<p id="parrafo">Este es el contenido original del párrafo.</p>
+<button onclick="cambiarContenido()">Cambiar Contenido</button>
+
+<script>
+    function cambiarContenido() {
+        document.getElementById("parrafo").innerText = "El contenido ha sido cambiado.";
+    }
+</script>
+
+</body>
+</html>

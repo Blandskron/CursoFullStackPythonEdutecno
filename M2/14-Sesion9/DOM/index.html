@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM con JavaScript</title>
+    <style>
+        .miClase {
+            color: red;
+        }
+        #miElemento {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ejemplo 1: Selección y manipulación de texto -->
+    <h2>Ejemplo Básico: Cambio de Texto</h2>
+    <p id="miElemento">Este es un párrafo que se cambiará.</p>
+    <button onclick="document.getElementById('miElemento').innerText = 'Texto cambiado!'">Cambiar Texto</button>
+
+    <!-- Ejemplo 2: Ocultar y mostrar un elemento -->
+    <h2>Ejemplo Básico: Ocultar y Mostrar Elemento</h2>
+    <button onclick="document.getElementById('miElemento').style.display = 'none';">Ocultar</button>
+    <button onclick="document.getElementById('miElemento').style.display = 'block';">Mostrar</button>
+
+    <!-- Ejemplo 3: Manipulación de Atributos -->
+    <h2>Ejemplo Intermedio: Cambio de Atributo de Imagen</h2>
+    <img id="miImagen" src="imagen1.jpg" alt="Imagen inicial" width="200">
+    <button onclick="document.getElementById('miImagen').src = 'imagen2.jpg';">Cambiar Imagen</button>
+
+    <!-- Ejemplo 4: Añadir un evento click -->
+    <h2>Ejemplo Intermedio: Evento Click en Botón</h2>
+    <button id="miBoton">Haz Click Aquí</button>
+
+    <!-- Ejemplo 5: Crear y añadir un nuevo elemento -->
+    <h2>Ejemplo Intermedio: Añadir Nuevo Elemento</h2>
+    <div id="miDiv">
+        <p>Este es un párrafo existente.</p>
+    </div>
+    <button onclick="var nuevoParrafo = document.createElement('p'); nuevoParrafo.innerText = 'Este es un nuevo párrafo.'; document.getElementById('miDiv').appendChild(nuevoParrafo);">Añadir Párrafo</button>
+
+    <!-- Ejemplo 6: Manipulación de lista de elementos -->
+    <h2>Ejemplo Avanzado: Manipulación de Lista de Elementos</h2>
+    <p class="miClase">Elemento 1</p>
+    <p class="miClase">Elemento 2</p>
+    <p class="miClase">Elemento 3</p>
+    <button onclick="var elementos = document.getElementsByClassName('miClase'); for(var i = 0; i < elementos.length; i++) { elementos[i].style.color = 'blue'; }">Cambiar Color de Elementos</button>
+
+    <!-- Ejemplo 7: Eliminar un elemento del DOM -->
+    <h2>Ejemplo Avanzado: Eliminar Elemento</h2>
+    <button onclick="var elementoAEliminar = document.getElementById('miElemento'); elementoAEliminar.parentNode.removeChild(elementoAEliminar);">Eliminar Párrafo Principal</button>
+
+    <!-- Ejemplo 8: Cambiar estilo dinámicamente -->
+    <h2>Ejemplo Avanzado: Cambiar Estilo al Pasar el Mouse</h2>
+    <p id="miElemento">Pasa el mouse sobre este párrafo para cambiar su color de fondo.</p>
+
+    <!-- Ejemplo 9: Crear una lista dinámica -->
+    <h2>Ejemplo Avanzado: Lista Dinámica</h2>
+    <input type="text" id="nuevaTarea" placeholder="Ingresa una nueva tarea">
+    <button id="agregarTarea">Agregar Tarea</button>
+    <ul id="listaTareas"></ul>
+
+    <!-- Conexión con los scripts de ejemplo -->
+    <script>
+        // Los scripts de ejemplo van aquí, puedes copiarlos de los ejemplos previos
+        document.getElementById("miBoton").addEventListener("click", function() {
+            alert("¡Botón clickeado!");
+        });
+
+        document.getElementById("miElemento").addEventListener("mouseover", function() {
+            this.style.backgroundColor = "yellow";
+        });
+        document.getElementById("miElemento").addEventListener("mouseout", function() {
+            this.style.backgroundColor = "";
+        });
+
+        document.getElementById("agregarTarea").addEventListener("click", function() {
+            var tarea = document.getElementById("nuevaTarea").value;
+            if(tarea !== "") {
+                var li = document.createElement("li");
+                li.innerText = tarea;
+                document.getElementById("listaTareas").appendChild(li);
+                document.getElementById("nuevaTarea").value = "";
+            }
+        });
+    </script>
+</body>
+</html>

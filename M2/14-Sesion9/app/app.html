@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con Modal y Navegación</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .modal-content {
+            max-width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Ejercicio: Menú en Modal con Navegación</h2>
+    <button id="openMenu" class="btn btn-primary">Abrir Menú</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="menuModalLabel">Seleccione una opción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="menu">
+                    <button class="btn btn-secondary btn-block" onclick="saludar()">1. Saludar</button>
+                    <button class="btn btn-secondary btn-block" onclick="mostrarNumeros()">2. Mostrar números del 1 al 5</button>
+                    <button class="btn btn-secondary btn-block" onclick="calcularSuma()">3. Calcular la suma de dos números</button>
+                    <button class="btn btn-secondary btn-block" onclick="cerrarModal()">4. Salir</button>
+                    <button class="btn btn-secondary btn-block" onclick="irAPaginaAlternativa()">5. Ir a Página Alternativa</button>
+                </div>
+                <div id="resultado" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("openMenu").addEventListener("click", function() {
+        $('#menuModal').modal('show');
+    });
+
+    function saludar() {
+        let nombre = prompt("¿Cuál es tu nombre?");
+        document.getElementById("resultado").style.display = "block";
+        document.getElementById("resultado").innerHTML = "<p>¡Hola, " + nombre + "!</p>";
+        document.getElementById("menu").style.display = "none";
+    }
+
+    function mostrarNumeros() {
+        let numeros = "";
+        for (let i = 1; i <= 5; i++) {
+            numeros += i + "<br>";
+        }
+        document.getElementById("resultado").style.display = "block";
+        document.getElementById("resultado").innerHTML = "<p>Números del 1 al 5:<br>" + numeros + "</p>";
+        document.getElementById("menu").style.display = "none";
+    }
+
+    function calcularSuma() {
+        let num1 = parseFloat(prompt("Ingrese el primer número:"));
+        let num2 = parseFloat(prompt("Ingrese el segundo número:"));
+        let suma = num1 + num2;
+        document.getElementById("resultado").style.display = "block";
+        document.getElementById("resultado").innerHTML = "<p>La suma de " + num1 + " y " + num2 + " es " + suma + "</p>";
+        document.getElementById("menu").style.display = "none";
+    }
+
+    function cerrarModal() {
+        document.getElementById("menu").style.display = "block";
+        document.getElementById("resultado").style.display = "none";
+        $('#menuModal').modal('hide');
+    }
+
+    function irAPaginaAlternativa() {
+        window.location.href = "paginaAlternativa.html";
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
