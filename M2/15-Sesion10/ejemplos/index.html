@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #caja {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Animaciones con jQuery</h2>
+<div id="caja"></div>
+<button id="animarBtn">Mover la Caja</button>
+
+<script>
+    $(document).ready(function(){
+        $("#animarBtn").click(function(){
+            $("#caja").animate({left: '+=250px'}, 1000).animate({top: '+=150px'}, 1000);
+        });
+    });
+</script>
+
+</body>
+</html>

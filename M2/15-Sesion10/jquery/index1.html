@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Texto con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Ejemplo 1: Cambiar Texto</h2>
+<p id="parrafo">Este es el contenido original del párrafo.</p>
+<button id="cambiarTextoBtn">Cambiar Texto</button>
+
+<script>
+    $(document).ready(function(){
+        $("#cambiarTextoBtn").click(function(){
+            $("#parrafo").text("El contenido ha sido cambiado usando jQuery.");
+        });
+    });
+</script>
+
+</body>
+</html>

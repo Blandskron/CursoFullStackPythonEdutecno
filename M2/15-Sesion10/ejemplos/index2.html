@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-and-Drop con jQuery UI</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<h2>Drag-and-Drop con jQuery UI</h2>
+<ul id="sortable">
+    <li class="ui-state-default">Elemento 1</li>
+    <li class="ui-state-default">Elemento 2</li>
+    <li class="ui-state-default">Elemento 3</li>
+    <li class="ui-state-default">Elemento 4</li>
+    <li class="ui-state-default">Elemento 5</li>
+</ul>
+
+<script>
+    $(document).ready(function(){
+        $("#sortable").sortable();
+        $("#sortable").disableSelection();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Claro y Oscuro con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .oscuro {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .btn-toggle {
+            margin: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Modo Claro y Oscuro con jQuery</h2>
+<p>Haga clic en el botón para cambiar entre el modo claro y oscuro.</p>
+<button class="btn-toggle">Cambiar a Modo Oscuro</button>
+
+<script>
+    $(document).ready(function(){
+        $(".btn-toggle").click(function(){
+            $("body").toggleClass("oscuro");
+            if ($("body").hasClass("oscuro")) {
+                $(".btn-toggle").text("Cambiar a Modo Claro");
+            } else {
+                $(".btn-toggle").text("Cambiar a Modo Oscuro");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

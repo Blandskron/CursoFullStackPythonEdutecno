@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Estilo con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #parrafo {
+            color: black;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Ejemplo 2: Cambiar Estilo</h2>
+<p id="parrafo">Este párrafo cambiará de estilo al hacer clic en el botón.</p>
+<button id="cambiarEstiloBtn">Cambiar Estilo</button>
+
+<script>
+    $(document).ready(function(){
+        $("#cambiarEstiloBtn").click(function(){
+            $("#parrafo").css({
+                "color": "blue",
+                "font-weight": "bold"
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

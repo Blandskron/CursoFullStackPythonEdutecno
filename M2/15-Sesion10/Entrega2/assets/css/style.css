@@ -1,0 +1,22 @@
+.tittle{
+    color: #231212;
+    margin: 40px 0px 0px 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.row{
+    margin: 0px 60px 0px 60px;
+    
+}
+.detalles{
+    display: none;
+   
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+  
+}
+ 

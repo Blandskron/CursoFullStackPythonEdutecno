@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir y Eliminar Elementos con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Ejemplo 3: Añadir y Eliminar Elementos</h2>
+<div id="contenedor">
+    <p>Elemento existente.</p>
+</div>
+<button id="añadirElementoBtn">Añadir Elemento</button>
+<button id="eliminarElementoBtn">Eliminar Último Elemento</button>
+
+<script>
+    $(document).ready(function(){
+        $("#añadirElementoBtn").click(function(){
+            $("#contenedor").append("<p>Este es un nuevo párrafo añadido con jQuery.</p>");
+        });
+
+        $("#eliminarElementoBtn").click(function(){
+            $("#contenedor p:last").remove();
+        });
+    });
+</script>
+
+</body>
+</html>

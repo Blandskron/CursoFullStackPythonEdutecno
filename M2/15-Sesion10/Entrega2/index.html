@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aerolíneas SKYP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+  <body>
+    
+    <!--navbar-->
+    <nav class="navbar bg-primary navbar-expand-lg " data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SKYP</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Planifica tu Viaje</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Administra tu vuelo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Check-In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Centro de Ayuda</a>
+              </li>             
+            </ul>           
+          </div>
+        </div>
+      </nav>
+
+    
+      <!--Cuerpo de la página-->
+
+      <h3 class="tittle">Viaja con precios ultra rebajados a los mejores destinos
+      </h3>
+
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="assets/img/Buenos aires.jpg" class="card-img-top" alt="Buenos Aires">
+            <div class="card-body">
+              <h5 class="card-title">Buenos Aires</h5>
+              <p class="card-text">Descubre la magia de Buenos Aires: tango apasionado, arquitectura vibrante, gastronomía exquisita y cultura envolvente te esperan.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary" id="Baires">Ver más</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="assets/img/machu pichu.jpg" class="card-img-top" alt="Machu Picchu">
+            <div class="card-body">
+              <h5 class="card-title">Machu Picchu</h5>
+              <p class="card-text">Embárcate en una aventura única en Machu Picchu: misteriosa historia, paisajes impresionantes y una experiencia inolvidable te aguardan</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary" id="MachuPicchu">Ver más</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="assets/img/Rio de janeiro.jpg" class="card-img-top" alt="Río de Janeior">
+            <div class="card-body">
+              <h5 class="card-title">Río de Janeiro</h5>
+              <p class="card-text">Vive la energía vibrante de Río de Janeiro: playas deslumbrantes, carnaval inolvidable, música contagiosa y una alegría incomparable te esperan.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary" id="Rio">Ver más</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detalles container"  id="detallesBaires">        
+        <div class="card m-5" >
+          <button type="button" class="btn-close" aria-label="Close"></button>
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="assets/img/Buenos aires.jpg" class="img-fluid rounded-start" alt="Buenos Aires">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Buenos Aires</h5>
+                <p class="card-text">Explora Buenos Aires y descubre sus joyas culturales. Visita el emblemático barrio de La Boca, hogar del famoso Caminito, con sus coloridas casas y artistas callejeros. Recorre el histórico barrio de San Telmo, conocido por sus ferias de antigüedades y su arquitectura colonial. No te pierdas el elegante barrio de Recoleta, donde encontrarás el Cementerio de la Recoleta y el icónico Teatro Colón. Sumérgete en la vida nocturna en Palermo Soho, con sus bares y restaurantes trendy. Buenos Aires ofrece una experiencia inolvidable llena de historia, arte y diversión.</p>
+                <p class="card-text"><small class="text-body-secondary">Ver vuelos disponibles</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detalles container"  id="detallesMachuPicchu">        
+        <div class="card m-5" >
+          <button type="button" class="btn-close" aria-label="Close"></button>
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="assets/img/machu pichu.jpg" class="img-fluid rounded-start" alt="Machu Picchu">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Machu Picchu</h5>
+                <p class="card-text">
+                  Descubre la majestuosidad de Machu Picchu, una maravilla arqueológica enclavada en las montañas de los Andes peruanos. Explora sus impresionantes terrazas incas, el Templo del Sol y la Puerta del Sol con vistas panorámicas. Sumérgete en la rica historia que envuelve cada piedra y disfruta de la energía mística del lugar. Las rutas de senderismo como el Camino Inca te llevan a través de paisajes espectaculares. Machu Picchu, declarada Patrimonio de la Humanidad, ofrece una experiencia inolvidable, donde la cultura ancestral y la naturaleza se entrelazan de manera única.</p>
+                <p class="card-text"><small class="text-body-secondary">Ver vuelos disponibles</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detalles container"  id="detallesRio">        
+        <div class="card m-5" >
+          <button type="button" class="btn-close" aria-label="Close"></button>
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="assets/img/Rio de janeiro.jpg" class="img-fluid rounded-start" alt="Río de janeiro">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Rio de Janeiro</h5>
+                <p class="card-text">
+                  Explora la exuberante belleza de Río de Janeiro, conocida por sus icónicas playas como Copacabana e Ipanema, donde el sol brilla sobre arenas doradas y aguas cristalinas. Asciende al famoso Cristo Redentor para disfrutar de vistas panorámicas de la ciudad y la bahía de Guanabara. Sumérgete en el vibrante carnaval, donde la samba y el color deslumbran las calles. Descubre la autenticidad en el bohemio barrio de Santa Teresa y saborea la cocina brasileña en el Mercado Municipal. Río de Janeiro, con su energía contagiosa, te espera para vivir experiencias inolvidables.</p>
+                <p class="card-text"><small class="text-body-secondary">Ver vuelos disponibles</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel de Imágenes con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #carrousel img {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+        #carrousel img:first-child {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Carrousel de Imágenes con jQuery</h2>
+<div id="carrousel">
+    <img src="imagen1.webp" alt="Imagen 1">
+    <img src="imagen2.webp" alt="Imagen 2">
+    <img src="imagen3.webp" alt="Imagen 3">
+</div>
+
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+            $("#carrousel img:first-child").fadeOut(1000)
+                .next("img").fadeIn(1000)
+                .end().appendTo("#carrousel");
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>
