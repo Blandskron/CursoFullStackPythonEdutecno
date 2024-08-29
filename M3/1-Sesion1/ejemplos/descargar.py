@@ -20,7 +20,7 @@ def download_video(url, output_path='.'):
 
 if __name__ == '__main__':
     # URL del video de YouTube
-    video_url = 'https://www.youtube.com/watch?v=VBcs8DZxBGc'  # Reemplaza con la URL del video que quieras descargar
+    video_url = 'youtube.com/watch?v=kLf3drTRhks'  # Reemplaza con la URL del video que quieras descargar
 
     # Directorio donde se guardará el video descargado
     output_directory = './descargas'

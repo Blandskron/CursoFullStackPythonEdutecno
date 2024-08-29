@@ -14,6 +14,6 @@ if __name__ == '__main__':
         config.add_static_view(name='static', path='static')
         app = config.make_wsgi_app()
     
-    server = make_server('0.0.0.0', 6543, app)
-    print("Server running on http://localhost:6543")
+    server = make_server('0.0.0.0', 8080, app)
+    print("Server running on http://localhost:8080")
     server.serve_forever()
