@@ -104,18 +104,6 @@ FastAPI genera automáticamente una documentación interactiva para tu API. Pued
 - **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 - **Redoc**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
-![Swagger UI](https://raw.githubusercontent.com/tu-usuario/fastapi-personas/main/images/swagger_ui.png)
-
-## Imágenes
-
-A continuación se muestra un ejemplo de cómo se verá la interfaz Swagger UI:
-
-![Ejemplo de Documentación Swagger](https://raw.githubusercontent.com/tu-usuario/fastapi-personas/main/images/swagger_ui_example.png)
-
-También, aquí hay una vista previa de cómo se verá la estructura de las rutas:
-
-![Estructura de Rutas](https://raw.githubusercontent.com/tu-usuario/fastapi-personas/main/images/routes_structure.png)
-
 ## Recursos Adicionales
 
 - [Documentación oficial de FastAPI](https://fastapi.tiangolo.com/)
