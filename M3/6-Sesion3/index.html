@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de los Sombreros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            padding: 15px;
+        }
+        .sombrero-img {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            margin: 5px 0;
+        }
+        .sombrero-card {
+            cursor: pointer;
+            padding: 10px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center my-4">Ejercicio de los Sombreros para Feedback</h1>
+        <p class="lead text-center mb-4">Proporciona retroalimentación desde diferentes perspectivas utilizando la técnica de los seis sombreros.</p>
+
+        <!-- Sombrero Blanco -->
+        <div class="card sombrero-card mb-3" data-bs-toggle="modal" data-bs-target="#sombreroBlancoModal">
+            <div class="card-body d-flex">
+                <div>
+                    <h5 class="card-title">Sombrero Blanco: Datos y Hechos</h5>
+                    <p class="card-text">Este sombrero se centra en la información disponible, hechos y cifras concretas.</p>
+                </div>
+                <img src="sombreroblanco.jpg" alt="Sombrero Blanco" class="sombrero-img ms-auto">
+            </div>
+        </div>
+
+        <!-- Sombrero Rojo -->
+        <div class="card sombrero-card mb-3" data-bs-toggle="modal" data-bs-target="#sombreroRojoModal">
+            <div class="card-body d-flex">
+                <div>
+                    <h5 class="card-title">Sombrero Rojo: Emociones e Intuición</h5>
+                    <p class="card-text">Aquí se expresan los sentimientos y reacciones intuitivas.</p>
+                </div>
+                <img src="sombrerorojo.jpg" alt="Sombrero Rojo" class="sombrero-img ms-auto">
+            </div>
+        </div>
+
+        <!-- Sombrero Negro -->
+        <div class="card sombrero-card mb-3" data-bs-toggle="modal" data-bs-target="#sombreroNegroModal">
+            <div class="card-body d-flex">
+                <div>
+                    <h5 class="card-title">Sombrero Negro: Juicio Crítico</h5>
+                    <p class="card-text">Este sombrero permite identificar riesgos, problemas y aspectos negativos.</p>
+                </div>
+                <img src="sombreronegro.jpg" alt="Sombrero Negro" class="sombrero-img ms-auto">
+            </div>
+        </div>
+
+        <!-- Sombrero Amarillo -->
+        <div class="card sombrero-card mb-3" data-bs-toggle="modal" data-bs-target="#sombreroAmarilloModal">
+            <div class="card-body d-flex">
+                <div>
+                    <h5 class="card-title">Sombrero Amarillo: Pensamiento Positivo</h5>
+                    <p class="card-text">Los participantes con este sombrero se enfocan en los beneficios y aspectos positivos.</p>
+                </div>
+                <img src="sombreroamarillo.jpg" alt="Sombrero Amarillo" class="sombrero-img ms-auto">
+            </div>
+        </div>
+
+        <!-- Sombrero Verde -->
+        <div class="card sombrero-card mb-3" data-bs-toggle="modal" data-bs-target="#sombreroVerdeModal">
+            <div class="card-body d-flex">
+                <div>
+                    <h5 class="card-title">Sombrero Verde: Creatividad</h5>
+                    <p class="card-text">Este sombrero se dedica a las ideas nuevas y soluciones innovadoras.</p>
+                </div>
+                <img src="sombreroverde.jpg" alt="Sombrero Verde" class="sombrero-img ms-auto">
+            </div>
+        </div>
+
+        <!-- Sombrero Azul -->
+        <div class="card sombrero-card mb-3" data-bs-toggle="modal" data-bs-target="#sombreroAzulModal">
+            <div class="card-body d-flex">
+                <div>
+                    <h5 class="card-title">Sombrero Azul: Control y Organización</h5>
+                    <p class="card-text">El portador de este sombrero guía la discusión y sintetiza la retroalimentación.</p>
+                </div>
+                <img src="sombreroazul.jpg" alt="Sombrero Azul" class="sombrero-img ms-auto">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Templates -->
+    <div class="modal fade" id="sombreroBlancoModal" tabindex="-1" aria-labelledby="sombreroBlancoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sombreroBlancoModalLabel">Sombrero Blanco: Datos y Hechos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="sombreroblanco.jpg" alt="Sombrero Blanco">
+                    <p>Este sombrero se centra en la información disponible, hechos y cifras concretas. Los participantes deben proporcionar datos objetivos sin interpretaciones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sombreroRojoModal" tabindex="-1" aria-labelledby="sombreroRojoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sombreroRojoModalLabel">Sombrero Rojo: Emociones e Intuición</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="sombrerorojo.jpg" alt="Sombrero Rojo">
+                    <p>Aquí se expresan los sentimientos y reacciones intuitivas. Es un espacio para compartir reacciones emocionales sin necesidad de justificar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sombreroNegroModal" tabindex="-1" aria-labelledby="sombreroNegroModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sombreroNegroModalLabel">Sombrero Negro: Juicio Crítico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="sombreronegro.jpg" alt="Sombrero Negro">
+                    <p>Este sombrero permite identificar riesgos, problemas y aspectos negativos. Se centra en las debilidades y posibles fallos del proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sombreroAmarilloModal" tabindex="-1" aria-labelledby="sombreroAmarilloModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sombreroAmarilloModalLabel">Sombrero Amarillo: Pensamiento Positivo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="sombreroamarillo.jpg" alt="Sombrero Amarillo">
+                    <p>Los participantes con este sombrero se enfocan en los beneficios y aspectos positivos, buscando oportunidades y fortalezas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sombreroVerdeModal" tabindex="-1" aria-labelledby="sombreroVerdeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sombreroVerdeModalLabel">Sombrero Verde: Creatividad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="sombreroverde.jpg" alt="Sombrero Verde">
+                    <p>Este sombrero se dedica a las ideas nuevas y soluciones innovadoras. Aquí se exploran alternativas, sugerencias y mejoras creativas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sombreroAzulModal" tabindex="-1" aria-labelledby="sombreroAzulModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sombreroAzulModalLabel">Sombrero Azul: Control y Organización</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="sombreroazul.jpg" alt="Sombrero Azul">
+                    <p>El portador de este sombrero guía la discusión, asegurando que cada sombrero se utilice adecuadamente y que la discusión siga el objetivo. También sintetiza la retroalimentación y decide los próximos pasos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
