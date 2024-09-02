@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room: Lógica Booleana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .room {
+            text-align: center;
+            padding: 50px;
+        }
+        .switch {
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="room">
+        <h1>Escape Room: Lógica Booleana</h1>
+        <p id="question">Hay dos interruptores (A y B). La puerta se abrirá solo si el interruptor A está encendido y el interruptor B está apagado.</p>
+
+        <div class="switch">
+            <label for="switchA">Interruptor A (True/False): </label>
+            <input type="text" id="switchA" class="form-control" placeholder="True o False">
+        </div>
+        <div class="switch">
+            <label for="switchB">Interruptor B (True/False): </label>
+            <input type="text" id="switchB" class="form-control" placeholder="True o False">
+        </div>
+        <button class="btn btn-primary mt-4" onclick="checkAnswer()">Abrir Puerta</button>
+        <p id="result" class="mt-3"></p>
+
+        <img id="doorImage" src="closed-door.jpg" alt="Puerta Cerrada" style="width:200px; margin-top:20px;">
+    </div>
+
+
+    <script>
+        const questions = [
+            {
+                text: 'La puerta se abrirá solo si el interruptor A está encendido y el interruptor B está apagado.',
+                correctAnswer: { A: 'true', B: 'false' }
+            },
+            {
+                text: 'La puerta se abrirá solo si ambos interruptores están apagados.',
+                correctAnswer: { A: 'false', B: 'false' }
+            },
+            {
+                text: 'La puerta se abrirá solo si al menos uno de los interruptores está encendido.',
+                correctAnswer: [{ A: 'true', B: 'false' }, { A: 'false', B: 'true' }, { A: 'true', B: 'true' }]
+            },
+            {
+                text: 'La puerta se abrirá solo si exactamente uno de los interruptores está encendido.',
+                correctAnswer: [{ A: 'true', B: 'false' }, { A: 'false', B: 'true' }]
+            },
+            {
+                text: 'La puerta se abrirá solo si ambos interruptores están encendidos.',
+                correctAnswer: { A: 'true', B: 'true' }
+            },
+            {
+                text: 'La puerta se abrirá solo si al menos uno de los interruptores está apagado.',
+                correctAnswer: [{ A: 'false', B: 'true' }, { A: 'true', B: 'false' }, { A: 'false', B: 'false' }]
+            },
+            {
+                text: 'La puerta se abrirá solo si el interruptor A está apagado y el interruptor B está encendido.',
+                correctAnswer: { A: 'false', B: 'true' }
+            },
+            {
+                text: 'La puerta se abrirá solo si el interruptor A está encendido o el interruptor B está encendido.',
+                correctAnswer: [{ A: 'true', B: 'true' }, { A: 'true', B: 'false' }, { A: 'false', B: 'true' }]
+            },
+            {
+                text: 'La puerta se abrirá solo si ambos interruptores no están encendidos.',
+                correctAnswer: [{ A: 'false', B: 'false' }, { A: 'false', B: 'true' }, { A: 'true', B: 'false' }]
+            },
+            {
+                text: 'La puerta se abrirá solo si ninguno de los interruptores está apagado.',
+                correctAnswer: { A: 'true', B: 'true' }
+            },
+            {
+                text: 'La puerta se abrirá solo si el interruptor A no está apagado y el interruptor B está encendido.',
+                correctAnswer: { A: 'true', B: 'true' }
+            },
+            {
+                text: 'La puerta se abrirá solo si el interruptor A está apagado o el interruptor B no está encendido.',
+                correctAnswer: [{ A: 'false', B: 'false' }, { A: 'false', B: 'true' }]
+            },
+            {
+                text: 'La puerta se abrirá solo si no ambos interruptores están encendidos.',
+                correctAnswer: [{ A: 'false', B: 'true' }, { A: 'true', B: 'false' }, { A: 'false', B: 'false' }]
+            }
+        ];
+
+
+        let currentQuestion = 0;
+
+        function checkAnswer() {
+            const switchA = document.getElementById('switchA').value.trim().toLowerCase();
+            const switchB = document.getElementById('switchB').value.trim().toLowerCase();
+            const result = document.getElementById('result');
+            const correctAnswer = questions[currentQuestion].correctAnswer;
+
+            let isCorrect = false;
+            
+            if (Array.isArray(correctAnswer)) {
+                isCorrect = correctAnswer.some(answer => answer.A === switchA && answer.B === switchB);
+            } else {
+                isCorrect = (switchA === correctAnswer.A && switchB === correctAnswer.B);
+            }
+
+            if (isCorrect) {
+                result.textContent = '¡Correcto! La puerta se abre.';
+                result.className = 'text-success';
+                document.getElementById('doorImage').src = 'open-door.jpg'; // Cambia la imagen a una puerta abierta
+                setTimeout(() => {
+                    currentQuestion++;
+                    if (currentQuestion < questions.length) {
+                        loadNextQuestion();
+                    } else {
+                        result.textContent = '¡Felicidades! Has completado el escape room.';
+                    }
+                }, 2000);
+            } else {
+                result.textContent = 'Incorrecto. Intenta nuevamente.';
+                result.className = 'text-danger';
+            }
+        }
+
+        function loadNextQuestion() {
+            document.getElementById('question').textContent = questions[currentQuestion].text;
+            document.getElementById('switchA').value = '';
+            document.getElementById('switchB').value = '';
+            document.getElementById('result').textContent = '';
+            document.getElementById('doorImage').src = 'closed-door.jpg'; // Vuelve a mostrar la puerta cerrada
+        }
+
+    </script>
+</body>
+</html>
