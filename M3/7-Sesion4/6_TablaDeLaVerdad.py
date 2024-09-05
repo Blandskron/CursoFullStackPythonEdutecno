@@ -9,10 +9,10 @@ not_A = not A
 not_B = not B
 
 print(f"A = {A}, B = {B}")
-print(f"A and B = {and_result}")
-print(f"A or B = {or_result}")
-print(f"not A = {not_A}")
-print(f"not B = {not_B}")
+print(f"A and B = {and_result}") #True
+print(f"A or B = {or_result}") #True
+print(f"not A = {not_A}") #False
+print(f"not B = {not_B}") #False
 
 # Cambiando valores para cubrir todas las combinaciones
 A = True
