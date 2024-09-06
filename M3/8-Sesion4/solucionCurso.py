@@ -61,3 +61,4 @@ elif pregunta == "caja3":
     print("esta caja no puede tener tornillos")
 else:
   print("caja no encontrada")
+  
