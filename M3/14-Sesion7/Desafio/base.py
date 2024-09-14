@@ -1,4 +1,5 @@
 # Lista de ventas: (producto, cantidad)
+# Lista         0               1               2               3
 ventas = [("Laptop", 3), ("Celular", 5), ("Monitor", 2), ("Teclado", 4)]
 
 # Recorrer la lista e imprimir cada venta
