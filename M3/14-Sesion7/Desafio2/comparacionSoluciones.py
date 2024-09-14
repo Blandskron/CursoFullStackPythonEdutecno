@@ -8,7 +8,6 @@ for i, producto in enumerate(ventas):
     if i == arreglo:
         print(f"El total de {producto[0]} vendida@s fue de {producto[1]}")
 
-
 # Solucion 2
 ventas = [("Laptops", 3), ("Celulares", 5), ("Monitores", 2), ("Teclados", 4)]
 
