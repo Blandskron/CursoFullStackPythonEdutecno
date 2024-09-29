@@ -1,0 +1,8 @@
+<class 'vehiculo.Particular'>,"{'marca': 'Ford', 'modelo': 'Fiesta', 'nro_ruedas': '4', 'velocidad': '180', 'cilindrada': '500', 'nro_puestos': '5'}"
+<class 'vehiculo.Carga'>,"{'marca': 'Daft Trucks', 'modelo': 'G 38', 'nro_ruedas': '10', 'velocidad': '120', 'cilindrada': '1000', 'peso_carga': '20000'}"
+<class 'vehiculo.Bicicleta'>,"{'marca': 'Shimano', 'modelo': 'MT Ranger', 'nro_ruedas': 2, 'tipo': 'Carrera'}"
+<class 'vehiculo.Motocicleta'>,"{'marca': 'BMW', 'modelo': 'F800s', 'nro_ruedas': 2, 'tipo': 'Deportiva', 'motor': '2T', 'cuadro': 'Doble Viga', 'nro_radios': 21}"
+<class 'vehiculo.Particular'>,"{'marca': 'Ford', 'modelo': 'Fiesta', 'nro_ruedas': '4', 'velocidad': '180', 'cilindrada': '500', 'nro_puestos': '5'}"
+<class 'vehiculo.Carga'>,"{'marca': 'Daft Trucks', 'modelo': 'G 38', 'nro_ruedas': '10', 'velocidad': '120', 'cilindrada': '1000', 'peso_carga': '20000'}"
+<class 'vehiculo.Bicicleta'>,"{'marca': 'Shimano', 'modelo': 'MT Ranger', 'nro_ruedas': 2, 'tipo': 'Carrera'}"
+<class 'vehiculo.Motocicleta'>,"{'marca': 'BMW', 'modelo': 'F800s', 'nro_ruedas': 2, 'tipo': 'Deportiva', 'motor': '2T', 'cuadro': 'Doble Viga', 'nro_radios': 21}"
