@@ -1,5 +1,5 @@
-def sumar_numeros(numeros):
-    return sum(numeros)
+def sumar_numeros(n):
+    return sum(n)
 
-lista = [1, 2, 3, 4]
-print(sumar_numeros(lista))  # Suma los valores de la lista
+l = [1, 2, 3, 4]
+print(sumar_numeros(l))  # Suma los valores de la lista

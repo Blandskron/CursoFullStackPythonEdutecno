@@ -34,21 +34,36 @@ Curso_Python_2024 = [
     "FERNANDO DE LA BARRA"
 ]
 
+def agregar(n, a):
+    nombre = n
+    apellido = a
+    nombreCompleto = nombre + " " + apellido
+    Curso_Python_2024v2.append(nombreCompleto)
+    print(f"El alumno {nombreCompleto} fue ingresado exitosamente")
+    print(Curso_Python_2024v2.index(nombreCompleto))
+
+def eliminar():
+    pass
+
+
 Curso_Python_2024v2 = Curso_Python_2024.copy()
 accion = int(input("Que accion desea realizar \n 1-Agregar \n 2-Eliminar \n 3-Editar \n 4-Salir \n"))
 
 if accion == 1:
-    nombre = input("Ingrese un alumno: \n ")
-    Curso_Python_2024v2.append(nombre)
-    print(f"El alumno {nombre} fue ingresado exitosamente")
-    print(Curso_Python_2024v2.index(nombre))
+    name = input("Ingrese nombre alumno: \n ")
+    lastName = input("Ingrese apellido alumno: \n ")
+    agregar(name, lastName)
 elif accion == 2:
+    eliminar()
+    """
+    Solucion 1
     for i, nombre in enumerate(Curso_Python_2024v2, start=1):
         print(i, " ", nombre)
     numero = int(input("Ingrese el numero del alumno en la lista que desea eliminar: "))
     eliminado = Curso_Python_2024v2.pop(numero -1)
     print(f"El alumno eliminado es '{eliminado}' ")
-    """
+
+    Solucion 2
     nombre = input("Ingrese el alumno que desea eliminar: ")
     if nombre in Curso_Python_2024v2:
         Curso_Python_2024v2.remove(nombre)

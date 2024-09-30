@@ -1,4 +1,4 @@
-def saludo(nombre, mensaje="¡Buen día!"):
+def saludo(nombre, mensaje="Hola"):
     print(f"{mensaje}, {nombre}")
 
 saludo("Carlos")  # Usa el valor predeterminado
