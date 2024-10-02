@@ -26,7 +26,7 @@ class Auto(Vehiculo):
     def frenar(self):
         return f"El auto {self.marca} {self.modelo} con {self.puertas} puertas está frenando."
 
-# Encapsulamiento: Método privado para ocultar detalles internos
+    # Encapsulamiento: Método privado para ocultar detalles internos
     def __detalles(self):
         return f"Detalles internos del auto: {self.marca}, {self.modelo}, {self.color}, {self.puertas}"
 

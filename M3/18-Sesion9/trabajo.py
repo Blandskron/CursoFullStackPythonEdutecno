@@ -52,6 +52,7 @@ def menu():
             cantidad = int(input("Cantidad: "))
             precio = float(input("Precio por unidad: "))
             agregar_producto(nombre, cantidad, precio)
+            print(inventario)
         elif opcion == "2":
             nombre = input("Nombre del producto a eliminar: ")
             eliminar_producto(nombre)
