@@ -4,3 +4,10 @@ class Vehiculo:
         self.color = color  # Atributo color inicializado en el constructor
         self.aceleracion = aceleracion  # Atributo aceleración inicializado en el constructor
         self.velocidad = 0  # Atributo con un valor por defecto
+
+class Alumno:
+    def __init__(self, nombre, curso):
+        self.nombre = nombre
+        self.curso = curso
+        self.materia = 0
+
