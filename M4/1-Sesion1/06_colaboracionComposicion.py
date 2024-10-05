@@ -20,4 +20,5 @@ class Vehiculo:
 # Creación de objetos y colaboración entre ellos
 motor_v8 = Motor("V8")
 mi_carro = Vehiculo("Rojo", 4, motor_v8)
+bicicleta = Vehiculo("Azul", 2, "apedales")
 mi_carro.arrancar()  # Inicia el vehículo encendiendo el motor
