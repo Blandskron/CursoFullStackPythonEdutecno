@@ -12,6 +12,8 @@ class Persona:
     def presentarse(self):
         """Método que permite a la persona presentarse."""
         return f"Hola, soy {self.nombre} y tengo {self.edad} años."
+    
+juan = Persona("Juan", 20)
 
 # Los diagramas de clases sirven para visualizar la arquitectura de un sistema,
 # facilitando la comprensión de su estructura y relaciones.
