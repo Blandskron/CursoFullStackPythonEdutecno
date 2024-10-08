@@ -1,5 +1,5 @@
-from biblioteca import Biblioteca
-from libro import Libro
+from modulo.biblioteca import Biblioteca
+from modulo.libro import Libro
 
 def main():
     biblioteca = Biblioteca("Alejandria")
