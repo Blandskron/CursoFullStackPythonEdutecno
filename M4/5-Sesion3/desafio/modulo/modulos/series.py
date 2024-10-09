@@ -8,5 +8,5 @@ class Series:
         self.temporadas = temporadas
         self.pg = pg
 
-    def get_info_series(self):
+    def get_info(self):
         return f"Titulo: {self.titulo} - Director: {self.director} - Genero: {self.genero} - Año: {self.year} - Capitulos: {self.capitulos} - Temporadas: {self.temporadas} - Guia Parental: {self.pg}"

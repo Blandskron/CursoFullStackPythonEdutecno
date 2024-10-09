@@ -6,5 +6,5 @@ class Juegos:
         self.year = year
         self.pg = pg
 
-    def get_info_juegos(self):
+    def get_info(self):
         return f"Titulo: {self.titulo} - Consola: {self.consola} - Genero: {self.genero} - Año: {self.year} - Guia Parental: {self.pg}"

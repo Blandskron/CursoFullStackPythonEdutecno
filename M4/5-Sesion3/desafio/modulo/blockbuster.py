@@ -1,17 +1,16 @@
-from modulos.juegos import Juegos
-from modulos.peliculas import Peliculas
-from modulos.series import Series
-from modulos.usuario import Usuario
+from .modulos.juegos import Juegos
+from .modulos.peliculas import Peliculas
+from .modulos.series import Series
+
 
 class Blockbuster:
     def __init__(self):
         self.productos = []
 
-    # esto es una accion interna
-    def guardad(self, producto):
+    # Esto es una acción interna
+    def guardar(self, producto):
         self.productos.append(producto)
 
-    # accion interna
-    def listar_productos():
-        pass
-    
+    def listar_productos(self):
+        for producto in self.productos:
+            print(producto.get_info())

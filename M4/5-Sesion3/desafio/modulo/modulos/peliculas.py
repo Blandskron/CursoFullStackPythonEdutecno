@@ -7,5 +7,5 @@ class Peliculas:
         self.duracion = duracion
         self.pg = pg
 
-    def get_info_peliculas(self):
+    def get_info(self):
         return f"Titulo: {self.titulo} - Director: {self.director} - Genero: {self.genero} - Año: {self.year} - Duracion: {self.duracion} - Guia Parental: {self.pg}"
