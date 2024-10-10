@@ -25,16 +25,19 @@ coche = Coche()
 moto = Moto()
 autobus = Autobus()
 
-# Usamos la misma función para mover diferentes tipos de vehículos
-mover_vehiculo(coche)   # El coche está conduciendo
-mover_vehiculo(moto)    # La moto está acelerando
-mover_vehiculo(autobus) # El autobús está en marcha
+# Diccionario de vehículos disponibles
+vehiculos = {
+    'coche': coche,
+    'moto': moto,
+    'autobus': autobus
+}
 
-pregunta = input("que vehiculo quiere mover: ").lower()
+# Preguntamos al usuario qué vehículo desea mover
+pregunta = input("¿Qué vehículo quiere mover (coche, moto, autobus)?: ")
 
-
-if pregunta in globals():
-    mover_vehiculo(globals()[pregunta])
+# Verificamos si el nombre ingresado existe en el diccionario
+if pregunta in vehiculos:
+    vehiculo = vehiculos[pregunta]  # Accedemos al vehículo correspondiente
+    mover_vehiculo(vehiculo)
 else:
-    print(f"No existe un vehículo llamado '{pregunta}'")
-
+    print("Vehículo no reconocido.")
