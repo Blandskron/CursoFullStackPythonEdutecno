@@ -33,7 +33,7 @@ class Musica(Producto):
     
     def alquilar(self):
         return f"Alquilando el álbum '{self.titulo}' de {self.artista} por {self.precio} USD."
-
+    
 # Polimorfismo en acción
 def procesar_alquiler(producto):
     print(producto.alquilar())
