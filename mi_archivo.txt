@@ -1,0 +1,3 @@
+Línea 1: Este es un ejemplo de manejo de archivos.
+Línea 2: Este archivo se cierra automáticamente usando 'with'.
+Línea 3: Python facilita la gestión de recursos.
