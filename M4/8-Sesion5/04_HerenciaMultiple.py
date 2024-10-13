@@ -1,17 +1,17 @@
 # Clases base
-class Volador:
-    def volar(self):
-        print("Este vehículo puede volar.")
+class Computadora:
+    def ejecutar_programa(self):
+        print("Ejecutando programa.")
 
-class Conductor:
-    def conducir(self):
-        print("Este vehículo puede conducir.")
+class TelefonoInteligente:
+    def hacer_llamada(self):
+        print("Haciendo una llamada.")
 
-# Clase que hereda de ambas clases base
-class VehiculoAutonomo(Volador, Conductor):
-    def mostrar_habilidades(self):
-        self.volar()
-        self.conducir()
+# Clase que hereda de ambas
+class DispositivoInteligente(Computadora, TelefonoInteligente):
+    def funciones(self):
+        self.ejecutar_programa()
+        self.hacer_llamada()
 
-vehiculo = VehiculoAutonomo()
-vehiculo.mostrar_habilidades()
+disp = DispositivoInteligente()
+disp.funciones()
