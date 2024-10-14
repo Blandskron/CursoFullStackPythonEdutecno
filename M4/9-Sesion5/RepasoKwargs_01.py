@@ -11,4 +11,4 @@ class Car(Vehicle):
         print(f'Coche: {self.brand}, {self.model}, Puertas: {self.doors}')
 
 # Crear instancia de Car
-coche = Car(brand="Toyota", model="Corolla", doors=5)
+coche = Car(brand="Toyota", model="Corolla")

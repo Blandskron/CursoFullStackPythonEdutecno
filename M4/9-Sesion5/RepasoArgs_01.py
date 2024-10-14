@@ -9,5 +9,6 @@ class Dog(Animal):
         super().__init__(*args)  # Pasa los argumentos a la clase base
         print(f'Perro: {self.name}, {self.age}')
 
+
 # Crear instancia de Dog
-perro = Dog("Firulais", 5, 5, "amigo")
+perro = Dog("Firulais", 5)
