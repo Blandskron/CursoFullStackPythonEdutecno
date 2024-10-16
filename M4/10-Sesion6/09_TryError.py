@@ -19,13 +19,6 @@ def excepciones_comunes():
     except KeyError:
         print("Error: La clave no existe en el diccionario.")
 
-    # FileNotFoundError: Intentar abrir un archivo que no existe
-    try:
-        with open("archivo_que_no_existe.txt", "r") as file:
-            contenido = file.read()
-    except FileNotFoundError:
-        print("Error: El archivo no existe.")
-
     # ValueError: Intentar convertir un tipo incorrecto
     try:
         numero = int("no es un número")
@@ -64,13 +57,6 @@ def excepciones_comunes():
     except OverflowError:
         print("Error: Cálculo excede el límite permitido.")
 
-    # IOError (OSError en Python 3): Error al realizar una operación de entrada/salida
-    try:
-        with open("/ruta/archivo_inexistente.txt", "r") as file:
-            contenido = file.read()
-    except OSError:
-        print("Error: Problema con el archivo o ruta.")
-
     # RuntimeError: Error general que ocurre en tiempo de ejecución
     try:
         raise RuntimeError("Este es un error en tiempo de ejecución.")
@@ -103,6 +89,20 @@ def excepciones_comunes():
         raise Exception("Excepción genérica.")
     except Exception as e:
         print(f"Error: {e}")
+
+    # FileNotFoundError: Intentar abrir un archivo que no existe
+    try:
+        with open("archivo_que_no_existe.txt", "r") as file:
+            contenido = file.read()
+    except FileNotFoundError:
+        print("Error: El archivo no existe.")
+
+    # IOError (OSError en Python 3): Error al realizar una operación de entrada/salida
+    try:
+        with open("/ruta/archivo_inexistente.txt", "r") as file:
+            contenido = file.read()
+    except OSError:
+        print("Error: Problema con el archivo o ruta.")
 
 # Llamar a la función que demuestra las excepciones comunes
 excepciones_comunes()

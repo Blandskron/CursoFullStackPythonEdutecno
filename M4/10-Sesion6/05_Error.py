@@ -6,7 +6,7 @@ try:
         contenido = file.read()
     resultado = 10 / 0
 except FileNotFoundError:
-    print("Error: El archivo no fue encontrado.")
+    print("Error: El archivo no fue encontrado, verifica que el archivo exista")
 except ZeroDivisionError:
     print("Error: No se puede dividir por cero.")
 except Exception as e:
