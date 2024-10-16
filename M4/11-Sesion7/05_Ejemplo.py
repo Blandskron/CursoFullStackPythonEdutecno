@@ -24,7 +24,7 @@ def dividir(x, y):
 # Función para leer un archivo usando acciones de limpieza predefinidas
 def leer_archivo(nombre_archivo):
     try:
-        with open(nombre_archivo, 'r') as f:
+        with open(nombre_archivo, 'r', encoding="utf-8") as f:
             contenido = f.readlines()
             for linea in contenido:
                 print(linea, end='')  # Imprime cada línea del archivo
@@ -43,7 +43,7 @@ def main():
     dividir(10, 'a')     # División con tipo incorrecto
 
     # Prueba de la función leer_archivo
-    leer_archivo("mi_archivo.txt")  # Leer archivo que hemos creado
+    leer_archivo("people_data.txt")  # Leer archivo que hemos creado
 
 if __name__ == "__main__":
     main()
