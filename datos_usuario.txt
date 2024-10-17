@@ -1,2 +1,2 @@
-Nombre: bastian
-Edad: 33
+Nombre: tengo hambre
+Edad: quiero comer

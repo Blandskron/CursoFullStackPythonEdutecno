@@ -1,6 +1,6 @@
 def leer_archivo():
     try:
-        with open("datos_usuario.txt", "r") as archivo:
+        with open("nombres.txt", "r") as archivo:
             # Leer el archivo línea por línea
             for linea in archivo:
                 print(linea, end='')  # Imprimir cada línea sin saltos de línea adicionales

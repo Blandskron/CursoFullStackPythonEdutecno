@@ -17,7 +17,6 @@ def comprar(saldo, precio):
 
 juan = Cliente("juan", 2000)
 
-# Definición de una excepción personalizada
 class MyError(Exception):
     def __init__(self, value):
         self.value = value
@@ -25,8 +24,7 @@ class MyError(Exception):
     def __str__(self):
         return repr(self.value)
 
-# Uso de la excepción personalizada
 try:
-    comprar(juan.saldo, precio)  # Lanzamos la excepción personalizada con el valor 6
+    comprar(juan.saldo, precio)
 except MyError as error:
     print(f"Ocurrió una nueva excepción: {error.value}")
