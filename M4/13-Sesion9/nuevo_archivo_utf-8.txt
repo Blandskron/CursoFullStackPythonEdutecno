@@ -1,0 +1,2 @@
+Este es un nuevo archivo creado en modo escritura.
+Aquí se pueden agregar más líneas de texto.

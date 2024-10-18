@@ -1,5 +1,5 @@
 def obtener_atributos():
-    archivo = open("mi_archivo.txt", "r")  # Asegúrate de que el archivo exista
+    archivo = open("nombres.txt", "r")
 
     # Obtener y mostrar atributos del archivo
     print("Nombre del archivo:", archivo.name)

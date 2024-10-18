@@ -1,0 +1,16 @@
+Este es un nuevo archivo creado en modo escritura.
+á se escribe como &aacute;
+é se escribe como &eacute;
+í se escribe como &iacute;
+ó se escribe como &oacute;
+ú se escribe como &uacute;
+ñ se escribe como &ntilde;
+Á se escribe como &Aacute;
+É se escribe como &Eacute;
+Í se escribe como &Iacute;
+Ó se escribe como &Oacute;
+Ú se escribe como &Uacute;
+Ñ se escribe como &Ntilde;
+¿ se escribe como &iquest;
+¡ se escribe como &iexcl;
+Aqu&iacute; se pueden agregar m&aacute;s l&iacute;neas de texto.

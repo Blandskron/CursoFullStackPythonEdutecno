@@ -1,7 +1,7 @@
 def guardar_datos():
     loquesea = input("Ingrese lo que quiera: ")
     mascosas = input("Ingrese mas cosas: ")
-    nombredelarchivo = "soy_un_archivo"
+    nombredelarchivo = "soy_un_archivo2"
     # Guardamos los datos en un archivo
     with open(f"{nombredelarchivo}.txt", "w") as archivo:
         archivo.write(f"info1: {loquesea}\n")

@@ -1,6 +1,6 @@
 def lectura_linea():
     try:
-        with open("mi_archivo.txt", "r") as archivo:
+        with open("nombres.txt", "r", encoding="utf-8") as archivo:
             linea = archivo.readline()  # Lee la primera línea
             print("Primera línea del archivo:", linea.strip())  # Eliminar saltos de línea
     except FileNotFoundError:
