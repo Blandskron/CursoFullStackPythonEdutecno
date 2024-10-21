@@ -1,7 +1,7 @@
 -- Definición de base de datos: Creamos una base de datos para gestionar una tienda.
 CREATE DATABASE TiendaDB;
 
--- Usamos la base de datos creada
+-- Usamos la base de datos creada  -- No Existe en PostgreSQL
 USE TiendaDB;
 
 -- Modelos de bases de datos: En este caso, estamos usando un modelo relacional.
