@@ -26,6 +26,32 @@ CREATE TABLE Categorias (
     nombre VARCHAR(100) NOT NULL         -- Nombre de la categoría
 );
 
+-- version 2
+-- Tabla Proveedores (1NF)
+CREATE TABLE Proveedores (
+    proveedor_id INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(15) NOT NULL
+);
+
+-- Tabla Categorias (3NF)
+CREATE TABLE Categorias (
+    categoria_id INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+-- Tabla Productos (2NF y relacionada a Categorias)
+CREATE TABLE Productos (
+    producto_id INT PRIMARY KEY,
+    proveedor_id INT,
+    categoria_id INT,                        -- Nueva columna para la categoría
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL,
+    FOREIGN KEY (proveedor_id) REFERENCES Proveedores(proveedor_id),
+    FOREIGN KEY (categoria_id) REFERENCES Categorias(categoria_id)
+);
+
 -- Ejemplo de inserciones de datos normalizados
 INSERT INTO Proveedores (proveedor_id, nombre, telefono) 
 VALUES (1, 'Proveedor A', '123456789');
