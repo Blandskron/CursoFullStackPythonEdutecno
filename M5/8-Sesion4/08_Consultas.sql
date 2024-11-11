@@ -21,7 +21,6 @@ SELECT COUNT(cliente_id) AS total_con_telefono
 FROM Clientes
 WHERE telefono IS NOT NULL;
 
--- Ejemplo validacion
 CREATE TABLE Clientes (
     cliente_id INT PRIMARY KEY,                          
     nombre VARCHAR(100) NOT NULL,                       
