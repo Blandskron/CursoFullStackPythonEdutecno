@@ -48,7 +48,6 @@ INSERT INTO productos (nombre, precio, stock) VALUES
     ('Smartphone', 700.00, 25);
 
 -- FUNCION ALMACENADA PARA REALIZAR PEDIDO
-
 CREATE OR REPLACE FUNCTION realizar_pedido(usuario INT, producto INT, cantidad INT) RETURNS VOID AS $$
 DECLARE
     stock_actual INT;
@@ -58,34 +57,28 @@ BEGIN
     SELECT stock INTO stock_actual FROM productos WHERE producto_id = producto;
 
     IF stock_actual >= cantidad THEN
-        -- Iniciar la transacción
-        BEGIN
-            -- Insertar el pedido
-            INSERT INTO pedidos (usuario_id, total) VALUES (usuario, 0) RETURNING pedido_id INTO nuevo_pedido_id;
+        -- Insertar el pedido
+        INSERT INTO pedidos (usuario_id, total) VALUES (usuario, 0) RETURNING pedido_id INTO nuevo_pedido_id;
 
-            -- Insertar el detalle del pedido
-            INSERT INTO detalles_pedido (pedido_id, producto_id, cantidad, subtotal)
-            VALUES (nuevo_pedido_id, producto, cantidad, (SELECT precio FROM productos WHERE producto_id = producto) * cantidad);
+        -- Insertar el detalle del pedido
+        INSERT INTO detalles_pedido (pedido_id, producto_id, cantidad, subtotal)
+        VALUES (nuevo_pedido_id, producto, cantidad, (SELECT precio FROM productos WHERE producto_id = producto) * cantidad);
 
-            -- Actualizar el stock del producto
-            UPDATE productos SET stock = stock - cantidad WHERE producto_id = producto;
+        -- Actualizar el stock del producto
+        UPDATE productos SET stock = stock - cantidad WHERE producto_id = producto;
 
-            -- Actualizar el total del pedido
-            UPDATE pedidos SET total = (SELECT SUM(subtotal) FROM detalles_pedido WHERE pedido_id = nuevo_pedido_id)
-            WHERE pedido_id = nuevo_pedido_id;
-
-            -- Confirmar la transacción
-            COMMIT;
-        EXCEPTION
-            WHEN OTHERS THEN
-                ROLLBACK;
-                RAISE NOTICE 'Error en la transacción. No se pudo completar el pedido.';
-        END;
+        -- Actualizar el total del pedido
+        UPDATE pedidos SET total = (SELECT SUM(subtotal) FROM detalles_pedido WHERE pedido_id = nuevo_pedido_id)
+        WHERE pedido_id = nuevo_pedido_id;
     ELSE
         RAISE NOTICE 'Stock insuficiente para completar el pedido.';
     END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE NOTICE 'Error en la transacción. No se pudo completar el pedido.';
 END;
 $$ LANGUAGE plpgsql;
+
 
 -- Ejemplo de uso de la función para realizar un pedido
 SELECT realizar_pedido(1, 1, 2);
