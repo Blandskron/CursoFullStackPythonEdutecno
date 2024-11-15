@@ -51,27 +51,32 @@ INSERT INTO libros (titulo, autor_id, genero, año_publicacion, stock) VALUES
 
 -- TRANSACCIONES Y PROPIEDADES ACID
 
--- Ejemplo de transacción para realizar un préstamo
+-- Transacción para realizar un préstamo
 BEGIN;
 
--- Verificar stock del libro
-DO $$
-DECLARE
-    stock_actual INT;
-BEGIN
-    SELECT stock INTO stock_actual FROM libros WHERE libro_id = 1;
+-- Verificar stock del libro y realizar el préstamo
+-- Se asegura de que el stock sea suficiente
+UPDATE libros
+SET stock = stock - 1
+WHERE libro_id = 1 AND stock > 0;
 
-    IF stock_actual > 0 THEN
-        -- Realizar el préstamo y reducir el stock
-        INSERT INTO prestamos (libro_id, usuario) VALUES (1, 'Juan Perez');
-        UPDATE libros SET stock = stock - 1 WHERE libro_id = 1;
-        
-        COMMIT;
-    ELSE
-        RAISE NOTICE 'Stock insuficiente para realizar el préstamo.';
-        ROLLBACK;
-    END IF;
-END $$;
+-- Insertar el préstamo solo si se redujo el stock
+INSERT INTO prestamos (libro_id, usuario)
+SELECT 1, 'Juan Perez'
+WHERE EXISTS (
+    SELECT 1
+    FROM libros
+    WHERE libro_id = 1 AND stock >= 0
+);
+
+-- Verificar si el préstamo fue exitoso; si no, revertir la transacción
+ROLLBACK WHEN NOT EXISTS (
+    SELECT 1
+    FROM prestamos
+    WHERE libro_id = 1 AND usuario = 'Juan Perez'
+);
+
+COMMIT;
 
 -- DCL (CONTROL DE ACCESO)
 
@@ -95,9 +100,15 @@ REVOKE INSERT, UPDATE, DELETE ON prestamos FROM lector;
 -- Transacción para devolver un libro y actualizar el stock
 BEGIN;
 
--- Actualizar la fecha de devolución en el préstamo y aumentar el stock
-UPDATE prestamos SET fecha_devolucion = CURRENT_DATE WHERE numero_prestamo = 1000;
-UPDATE libros SET stock = stock + 1 WHERE libro_id = (SELECT libro_id FROM prestamos WHERE numero_prestamo = 1000);
+-- Actualizar la fecha de devolución en el préstamo
+UPDATE prestamos
+SET fecha_devolucion = CURRENT_DATE
+WHERE numero_prestamo = 1000;
+
+-- Aumentar el stock del libro correspondiente
+UPDATE libros
+SET stock = stock + 1
+WHERE libro_id = (SELECT libro_id FROM prestamos WHERE numero_prestamo = 1000);
 
 COMMIT;
 

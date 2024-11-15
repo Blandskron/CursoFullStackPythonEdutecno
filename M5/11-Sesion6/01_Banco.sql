@@ -39,9 +39,7 @@ INSERT INTO cuentas (cliente_id, tipo_cuenta, saldo) VALUES
     (1, 'Ahorro', 5000.00),
     (2, 'Corriente', 10000.00);
 
--- ENTENDIENDO TRANSACCIONES Y PROPIEDADES ACID
-
--- Ejemplo de transacción para realizar un depósito
+-- Transacción para realizar un depósito
 BEGIN;  -- Inicia la transacción
 
 -- Inserta una transacción de depósito
@@ -54,39 +52,43 @@ WHERE cuenta_id = 1;
 
 COMMIT;  -- Confirma la transacción para aplicar los cambios
 
--- Ejemplo de transacción para realizar un retiro, aplicando la propiedad ACID
+-- Transacción para realizar un retiro
 BEGIN;
 
--- Verificar saldo antes de proceder con el retiro
+-- Retirar solo si hay suficiente saldo
 UPDATE cuentas
 SET saldo = saldo - 500.00
 WHERE cuenta_id = 2 AND saldo >= 500.00;
 
--- Registrar la transacción de retiro
+-- Registrar la transacción de retiro solo si el saldo era suficiente
 INSERT INTO transacciones (cuenta_id, monto, tipo_transaccion)
-VALUES (2, -500.00, 'Retiro');
+SELECT 2, -500.00, 'Retiro'
+FROM cuentas
+WHERE cuenta_id = 2 AND saldo >= 0;
 
--- Confirmar la transacción solo si el saldo fue suficiente
-IF FOUND THEN
-    COMMIT;
-ELSE
-    ROLLBACK;
-END IF;
+-- Verificar si se registró la transacción (si no, revertir)
+ROLLBACK WHEN NOT EXISTS (
+    SELECT 1
+    FROM transacciones
+    WHERE cuenta_id = 2 AND monto = -500.00
+);
 
--- PALABRAS RESERVADAS PARA TRANSACCIONES
+COMMIT;
 
 -- Usando SAVEPOINT para un punto de retorno en caso de error
-
 BEGIN;
 
--- Crear un punto de retorno al agregar un cliente y una cuenta
+-- Crear un cliente y un punto de retorno
 INSERT INTO clientes (nombre, apellido, correo) VALUES ('Carlos', 'Lopez', 'carlos.lopez@example.com');
 SAVEPOINT sp_cliente;
 
 -- Intentar agregar una cuenta con un saldo inicial inválido
-INSERT INTO cuentas (cliente_id, tipo_cuenta, saldo) VALUES ((SELECT cliente_id FROM clientes WHERE correo = 'carlos.lopez@example.com'), 'Corriente', -100.00);
+INSERT INTO cuentas (cliente_id, tipo_cuenta, saldo) 
+SELECT cliente_id, 'Corriente', -100.00
+FROM clientes
+WHERE correo = 'carlos.lopez@example.com';
 
--- Si ocurre un error, revertir al punto guardado
+-- Si ocurre un error, revertir al último SAVEPOINT
 ROLLBACK TO sp_cliente;
 
 COMMIT;
@@ -110,27 +112,32 @@ GRANT SELECT, INSERT ON transacciones TO cajero;
 -- Ejemplo de revocar permisos
 REVOKE INSERT ON cuentas FROM cajero;
 
--- TCL (TRANSACTIONAL CONTROL LANGUAGE)
-
--- Empleando COMMIT y ROLLBACK en un contexto transaccional
-
 -- Transacción para transferir fondos entre cuentas
 BEGIN;
 
--- Retiro de la cuenta origen
-UPDATE cuentas SET saldo = saldo - 200.00 WHERE cuenta_id = 1 AND saldo >= 200.00;
-IF NOT FOUND THEN
-    ROLLBACK;
-ELSE
-    -- Depósito en la cuenta destino
-    UPDATE cuentas SET saldo = saldo + 200.00 WHERE cuenta_id = 2;
+-- Retirar de la cuenta origen (solo si hay suficiente saldo)
+UPDATE cuentas
+SET saldo = saldo - 200.00
+WHERE cuenta_id = 1 AND saldo >= 200.00;
 
-    -- Registrar ambas transacciones
-    INSERT INTO transacciones (cuenta_id, monto, tipo_transaccion) VALUES (1, -200.00, 'Retiro');
-    INSERT INTO transacciones (cuenta_id, monto, tipo_transaccion) VALUES (2, 200.00, 'Depósito');
+-- Registrar la transacción de retiro
+INSERT INTO transacciones (cuenta_id, monto, tipo_transaccion)
+SELECT 1, -200.00, 'Retiro'
+FROM cuentas
+WHERE cuenta_id = 1 AND saldo >= 0;
 
-    COMMIT;  -- Finaliza la transacción si todo fue exitoso
-END IF;
+-- Depositar en la cuenta destino
+UPDATE cuentas
+SET saldo = saldo + 200.00
+WHERE cuenta_id = 2;
+
+-- Registrar la transacción de depósito
+INSERT INTO transacciones (cuenta_id, monto, tipo_transaccion)
+SELECT 2, 200.00, 'Depósito'
+FROM cuentas
+WHERE cuenta_id = 1 AND saldo >= 0;
+
+COMMIT;
 
 -- INTEGRIDAD REFERENCIAL
 
