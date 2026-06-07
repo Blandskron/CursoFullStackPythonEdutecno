@@ -1,2 +1,0 @@
-Nombre: tengo hambre
-Edad: quiero comer

@@ -1,4 +1,0 @@
-Producto: computador
-Precio: 500000
-Producto: laptop
-Precio: 300000
