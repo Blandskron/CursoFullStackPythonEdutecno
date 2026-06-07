@@ -1,12 +1,14 @@
-# 🎓 Curso Desarrollo Full Stack Python - Edutecno (2024)
+# 🎓 Curso de Desarrollo Full Stack Python (Autoinstrucción)
 
-¡Bienvenido al repositorio oficial del **Curso de Desarrollo Full Stack Python** dictado por **Edutecno**! Este repositorio contiene todo el material práctico, ejercicios guiados, desafíos semanales y plantillas de código utilizados a lo largo del bootcamp para formar desarrolladores de software Full Stack.
+¡Bienvenido a la guía de estudio autodidacta para el **Curso de Desarrollo Full Stack Python**! Este repositorio está estructurado para que cualquier persona interesada de forma independiente pueda aprender y dominar el ciclo completo de desarrollo de aplicaciones web, desde maquetación básica hasta arquitectura backend y bases de datos relacionales.
+
+Aquí encontrarás material estructurado por módulos, ejercicios guiados, desafíos y plantillas de código organizadas cronológicamente para acompañarte en tu ruta de aprendizaje de manera autónoma.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Cubiertas en el Curso
 
-Para facilitar el aprendizaje y la especialización, el curso emplea un stack tecnológico de vanguardia:
+Para facilitar el aprendizaje autónomo, el curso cubre y utiliza un conjunto completo de tecnologías modernas de desarrollo web:
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
@@ -23,41 +25,39 @@ Para facilitar el aprendizaje y la especialización, el curso emplea un stack te
 
 ## 📂 Estructura del Repositorio
 
-El repositorio está organizado de forma modular. Cada carpeta (`M1` a `M5`) representa un módulo temático del bootcamp:
+El repositorio está organizado en 5 grandes bloques modulares de aprendizaje:
 
 ```bash
 CursoFullStackPythonEdutecno/
-├── M1/                 # Habilidades Blandas, Ética y Roles en TI
-├── M2/                 # Fundamentos Frontend (HTML, CSS, JS, Bootstrap, jQuery) y Git
-├── M3/                 # Fundamentos de Python Backend (Bottle, Flask, FastAPI)
-├── M4/                 # Programación Orientada a Objetos (POO) y Manejo de Archivos
-├── M5/                 # Bases de Datos Relacionales y SQL (PostgreSQL, Triggers)
-├── documentacion/      # 📚 NUEVA DOCUMENTACIÓN DETALLADA DEL CURSO
-├── seleccion.py        # Script para sorteos y asignación de roles en dinámicas
-├── requirements.txt    # Lista de dependencias del proyecto
-└── README.md           # Guía principal de inicio
+├── M1/                 # Módulo 1: Fundamentos de Ingeniería y Roles de TI
+├── M2/                 # Módulo 2: Frontend (HTML, CSS, JS, Bootstrap, jQuery) y Git
+├── M3/                 # Módulo 3: Fundamentos de Backend en Python (Flask, FastAPI, etc.)
+├── M4/                 # Módulo 4: Programación Orientada a Objetos (POO) y Archivos
+├── M5/                 # Módulo 5: Modelado de Bases de Datos Relacionales y SQL
+├── documentacion/      # 📚 Guías de estudio y explicaciones conceptuales detalladas
+└── README.md           # Guía general de inicio
 ```
 
 ---
 
-## 📚 Documentación de Módulos (Índice Rápido)
+## 📚 Enlaces de Estudio y Guías de Aprendizaje
 
-Hemos creado una **documentación detallada paso a paso** para cada sección del bootcamp. Puedes acceder a las guías de estudio haciendo clic en los enlaces a continuación:
+Para guiar tu estudio independiente, puedes acceder a las guías conceptuales y de ejercicios diseñadas para cada módulo:
 
 > [!NOTE]
-> Para ver el índice completo, accede a la [Página Principal de la Documentación](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/README.md).
+> Consulta la [Página Principal de la Documentación](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/README.md) para tener un mapa completo de los temas.
 
-*   **Módulo 1**: [Habilidades Blandas, Ética y Roles en TI](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M1_habilidades_blandas.md)
-*   **Módulo 2**: [Frontend (HTML, CSS, JS, Bootstrap, jQuery) y Git](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M2_frontend_git.md)
-*   **Módulo 3**: [Fundamentos de Programación en Python](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M3_python_basico.md)
-*   **Módulo 4**: [POO en Python y Manejo de Archivos](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M4_python_poo.md)
-*   **Módulo 5**: [Bases de Datos Relacionales y SQL](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M5_bases_datos.md)
+*   **Módulo 1 (Ingeniería de Software)**: [Roles, Elevator Pitch y Ética en TI](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M1_habilidades_blandas.md)
+*   **Módulo 2 (Frontend)**: [HTML5, CSS3, JS Interactividad y Git](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M2_frontend_git.md)
+*   **Módulo 3 (Backend Base)**: [Programación en Python y microframeworks](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M3_python_basico.md)
+*   **Módulo 4 (POO en Python)**: [Clases, Herencia, Excepciones e I/O de Archivos](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M4_python_poo.md)
+*   **Módulo 5 (SQL y DB)**: [Modelado, SQL Avanzado y Conexiones Relacionales](file:///c:/Users/BlandskronNotebook/Documents/updatesGitHubs/CursoFullStackPythonEdutecno/documentacion/M5_bases_datos.md)
 
 ---
 
-## 🚀 Instalación y Configuración del Entorno Local
+## 🚀 Cómo Configurar tu Entorno Local de Estudio
 
-Para ejecutar los scripts de Python, levantar los servidores web de desarrollo (como FastAPI o Flask) y probar las actividades locales, sigue estos pasos:
+Para ejecutar las prácticas de los módulos Backend y bases de datos, sigue estas instrucciones:
 
 ### 1. Clonar el repositorio
 ```bash
@@ -65,8 +65,8 @@ git clone https://github.com/tu-usuario/CursoFullStackPythonEdutecno.git
 cd CursoFullStackPythonEdutecno
 ```
 
-### 2. Crear y activar un entorno virtual (Virtual Environment)
-Se recomienda aislar las dependencias del proyecto para evitar conflictos globales en tu sistema operativo:
+### 2. Crear y activar tu entorno virtual de Python
+Es altamente recomendable aislar tus paquetes para no interferir con tu instalación global del sistema operativo:
 
 *   **En Windows (PowerShell):**
     ```powershell
@@ -79,19 +79,20 @@ Se recomienda aislar las dependencias del proyecto para evitar conflictos global
     source venv/bin/activate
     ```
 
-### 3. Instalar las dependencias del curso
-Con el entorno virtual activado, instala todas las librerías necesarias especificadas en el archivo `requirements.txt`:
+### 3. Instalar librerías requeridas
+Puedes instalar las principales librerías utilizadas en los módulos backend (como Flask, FastAPI, SQLAlchemy y conectores de PostgreSQL) usando:
 ```bash
-pip install -r requirements.txt
+pip install fastapi uvicorn sqlalchemy psycopg2-binary Flask CherryPy bottle pyramid
 ```
 
-### 4. Probar la configuración
-Puedes probar el entorno ejecutando el script `seleccion.py` ubicado en la raíz, el cual realiza una selección aleatoria de personas para dinámicas grupales:
+### 4. Ejecución del código
+Navega a la carpeta del ejercicio correspondiente dentro de los módulos y corre los scripts. Por ejemplo, para probar los archivos de POO del Módulo 4:
 ```bash
-python seleccion.py
+cd M4/2-Sesion2
+python 13_animal.py
 ```
 
 ---
 
-## ✍️ Créditos y Licencia
-Este repositorio es de carácter educativo y ha sido creado con fines formativos para el programa de desarrollo Full Stack de **Edutecno** (Año 2024).
+## ✍️ Créditos
+Este repositorio es de carácter educativo y está diseñado para servir como un recurso abierto de autoaprendizaje en desarrollo web Full Stack con Python.

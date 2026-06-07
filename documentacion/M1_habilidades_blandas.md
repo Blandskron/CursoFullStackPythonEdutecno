@@ -34,8 +34,9 @@ Reflexión profunda sobre las dinámicas humanas y profesionales en proyectos de
 
 ---
 
-## 🛠️ Actividades Destacadas
-A lo largo de este módulo, los estudiantes realizan actividades como:
-- **Investigación de Roles**: Análisis profundo de responsabilidades y herramientas típicas por puesto.
-- **Elevator Pitch Personal**: Redacción y presentación en clase de una autopresentación comercial.
-- **Debate de Ética**: Discusiones sobre la ética profesional en el desarrollo de software y la frontera del hacking ético.
+## 🛠️ Ejercicios de Práctica y Autoevaluación
+Para asimilar estos conceptos de forma independiente, se sugiere realizar los siguientes ejercicios prácticos autónomos:
+- **Redacción de Perfil**: Elige uno de los roles de TI presentados y redacta una descripción de perfil laboral simulando una postulación real en plataformas como LinkedIn.
+- **Tu Propio Elevator Pitch**: Graba un video de 1 minuto presentándote como desarrollador de software y define claramente tu propuesta de valor y tus metas profesionales.
+- **Análisis de Casos Éticos**: Lee sobre vulnerabilidades famosas de la industria y reflexiona sobre el límite entre las pruebas de penetración autorizadas (hacking ético) y las actividades maliciosas.
+

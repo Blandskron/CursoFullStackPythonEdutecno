@@ -1,8 +1,7 @@
-# Documentación del Curso: Desarrollo Full Stack Python
+# Documentación del Curso: Desarrollo Full Stack Python (Autoaprendizaje)
 
-¡Bienvenido a la documentación oficial del **Curso de Desarrollo Full Stack Python**! Este espacio está diseñado para servir como una guía de estudio, repaso y consulta rápida sobre todos los conceptos, prácticas y tecnologías impartidos a lo largo del bootcamp.
+¡Bienvenido a la documentación oficial del **Curso de Desarrollo Full Stack Python**! Este espacio está diseñado para servir como una guía de estudio, repaso y consulta rápida sobre todos los conceptos, prácticas y tecnologías explicados a lo largo del curso.
 
-Aquí encontrarás un desglose detallado de cada uno de los módulos que componen el plan de estudios, desde las habilidades fundamentales en ingeniería de software hasta la conexión de aplicaciones backend con bases de datos relacionales robustas.
 
 ---
 
@@ -24,7 +23,8 @@ La ruta de aprendizaje está estructurada de manera incremental, garantizando qu
 
 1. **Repaso Teórico**: Cada guía contiene explicaciones estructuradas de los conceptos teóricos clave de cada sesión.
 2. **Ejemplos Prácticos**: Se incluyen fragmentos de código comentados y consultas de base de datos reales basados en las carpetas de ejercicios del repositorio.
-3. **Proyectos y Desafíos**: Encontrarás referencias a las actividades y entregas obligatorias para consolidar tu conocimiento en cada etapa del bootcamp.
+3. **Proyectos y Desafíos**: Encontrarás referencias a las actividades y entregas sugeridas para consolidar tu conocimiento en cada etapa del curso.
 
 > [!TIP]
 > Si estás buscando un tema específico (por ejemplo, *cómo usar JOINs en SQL* o *cómo funciona el MRO en Python*), puedes hacer clic en el enlace del módulo correspondiente para ir directamente a la sección detallada.
+
